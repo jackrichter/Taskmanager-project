@@ -14,10 +14,11 @@ import java.util.List;
 public class TaskService {
 
     private final TaskRepository taskRepository;
-    private final ModelMapper modelMapper = new ModelMapper();
+    private final ModelMapper modelMapper;
 
-    public TaskService(TaskRepository taskRepository) {
+    public TaskService(TaskRepository taskRepository, ModelMapper modelMapper) {
         this.taskRepository = taskRepository;
+        this.modelMapper = modelMapper;
     }
 
     public TaskDto createTask (TaskDto taskDto) {
