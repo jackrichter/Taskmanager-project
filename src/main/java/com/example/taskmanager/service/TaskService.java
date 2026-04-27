@@ -6,6 +6,7 @@ import com.example.taskmanager.model.Task;
 import com.example.taskmanager.repository.TaskRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+import tools.jackson.databind.ObjectMapper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,7 @@ public class TaskService {
 
     private final TaskRepository taskRepository;
     private final ModelMapper modelMapper;
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     public TaskService(TaskRepository taskRepository, ModelMapper modelMapper) {
         this.taskRepository = taskRepository;
@@ -24,6 +26,16 @@ public class TaskService {
     public TaskDto createTask (TaskDto taskDto) {
         Task task = modelMapper.map(taskDto, Task.class);
         Task savesTask = taskRepository.save(task);
+
+        try {
+            // Convert object to JSON string manually
+            String jsonString = objectMapper.writeValueAsString(savesTask);
+
+            // Convert JSON string back to Task object
+            Task savedTask = objectMapper.readValue(jsonString, Task.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         return modelMapper.map(savesTask, TaskDto.class);
     }
