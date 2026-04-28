@@ -4,32 +4,33 @@ import com.example.taskmanager.dto.TaskDto;
 import com.example.taskmanager.exception.TaskNotFoundException;
 import com.example.taskmanager.model.Task;
 import com.example.taskmanager.repository.TaskRepository;
+import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import tools.jackson.databind.ObjectMapper;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class TaskService {
 
     private final TaskRepository taskRepository;
-    private final ModelMapper modelMapper;
-    private final ObjectMapper objectMapper = new ObjectMapper();
-
-    public TaskService(TaskRepository taskRepository, ModelMapper modelMapper) {
-        this.taskRepository = taskRepository;
-        this.modelMapper = modelMapper;
-    }
+    private final @Qualifier("customModelMapper") ModelMapper modelMapper;
+    private final @Qualifier("customJsonMapper") ObjectMapper objectMapper;
 
     public TaskDto createTask (TaskDto taskDto) {
         Task task = modelMapper.map(taskDto, Task.class);
+        task.setCreatedAt(LocalDateTime.now());
         Task savesTask = taskRepository.save(task);
 
         try {
             // Convert object to JSON string manually
             String jsonString = objectMapper.writeValueAsString(savesTask);
+            System.out.println("JSON String: " + jsonString);
 
             // Convert JSON string back to Task object
             Task savedTask = objectMapper.readValue(jsonString, Task.class);
