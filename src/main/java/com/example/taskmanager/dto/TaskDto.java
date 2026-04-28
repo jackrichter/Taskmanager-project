@@ -1,5 +1,6 @@
 package com.example.taskmanager.dto;
 
+import com.example.taskmanager.enums.TaskStatusEnum;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,5 +21,5 @@ public class TaskDto {
     @NotBlank
     private String description;
 
-    private String status;
+    private TaskStatusEnum status;
 }
