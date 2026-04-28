@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import tools.jackson.databind.ObjectMapper;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -42,21 +41,18 @@ public class TaskService {
     }
 
     public List<TaskDto> getAllTasks() {
-        List<Task> tasks = taskRepository.findAll();
-        List <TaskDto> taskDtos = new ArrayList<>();
 
-        for (Task task : tasks) {
-            taskDtos.add(modelMapper.map(task, TaskDto.class));
-        }
-
-        return taskDtos;
+        return taskRepository.findAll()
+                .stream()
+                .map(task -> modelMapper.map(task, TaskDto.class))
+                .toList();
     }
 
     public TaskDto getTaskById(Integer id) {
-        Task task = taskRepository.findById(id).orElseThrow(() ->
-            new TaskNotFoundException("Task not found with id: " + id));
 
-        return modelMapper.map(task, TaskDto.class);
+        return taskRepository.findById(id)
+                .map(task -> modelMapper.map(task, TaskDto.class))
+                .orElseThrow(() -> new TaskNotFoundException("Task not found with id: " + id)); //Because we have an Optional!
     }
 
     public TaskDto updateTask(Integer id, TaskDto taskDto) {
