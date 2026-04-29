@@ -40,6 +40,14 @@ public class TaskService {
         return modelMapper.map(savesTask, TaskDto.class);
     }
 
+    public void createMultipleTasks(List<TaskDto> taskDtos) {
+        List<Task> tasks = taskDtos.stream()
+                .map(taskDto -> modelMapper.map(taskDto, Task.class))
+                .toList();
+
+        taskRepository.saveAll(tasks);
+    }
+
     public List<TaskDto> getAllTasks() {
 
         return taskRepository.findAll()
