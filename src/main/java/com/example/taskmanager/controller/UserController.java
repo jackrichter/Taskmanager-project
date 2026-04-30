@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/user")
 @RequiredArgsConstructor
 public class UserController {
 
@@ -20,6 +20,15 @@ public class UserController {
     @GetMapping
     public ResponseEntity<List<UserDto>> getAllUsers() {
         List<UserDto> usersDtos = userService.getAllUsers();
+        return ResponseEntity.ok(usersDtos);
+    }
+
+    @GetMapping(value = "/sorted")
+    public ResponseEntity<List<UserDto>> getSortedUsers(
+            @RequestParam(defaultValue = "0") int skip,
+            @RequestParam(defaultValue = "5") int limit
+    ) {
+        List<UserDto> usersDtos = userService.getSortedUsers(skip, limit);
         return ResponseEntity.ok(usersDtos);
     }
 

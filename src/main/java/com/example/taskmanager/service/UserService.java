@@ -11,6 +11,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -24,12 +25,6 @@ public class UserService {
 
         List<User> users = userRepository.findAll();
 
-        // For debugging purposes
-//        List<Order> orders = orderRepository.findAll();
-//        List<Product> products = productRepository.findAll();
-//        List<Profile> profiles = profileRepository.findAll();
-//        List<Category> categories = categoryRepository.findAll();
-
         List<UserDto> userDtos = new ArrayList<>();
 
         for (User user : users) {
@@ -37,6 +32,20 @@ public class UserService {
         }
 
         return userDtos;
+    }
+
+    public List<UserDto> getSortedUsers(int skip, int limit) {
+
+        List<User> users = userRepository.findAll();
+
+        // ATTENTION! This approach works only AFTER all data has been loaded and in memory! Not efficient for pagination of big datasets!
+        // Sorting and paging results with streams. Sort by name. If names are equal, sort by email.
+        return users.stream()
+                .map(user -> modelMapper.map(user, UserDto.class))
+                .sorted(Comparator.comparing(UserDto::getName).thenComparing(UserDto::getEmail))
+                .skip(skip)
+                .limit(limit)
+                .toList();
     }
 
     public void addUser(UserDto userDto) {
