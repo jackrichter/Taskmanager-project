@@ -4,10 +4,14 @@ import com.example.taskmanager.dto.UserDto;
 import com.example.taskmanager.exception.UserNotFoundException;
 import com.example.taskmanager.exception.UserNotValidException;
 import com.example.taskmanager.model.User;
-import com.example.taskmanager.repository.UserRepository;
+import com.example.taskmanager.repository.UserRepositoryPrevious;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -16,9 +20,9 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class UserService {
+public class UserServicePrevious {
 
-    private final UserRepository userRepository;
+    private final UserRepositoryPrevious userRepository;
     private final ModelMapper modelMapper;
 
     public List<UserDto> getAllUsers() {
@@ -34,7 +38,21 @@ public class UserService {
         return userDtos;
     }
 
-    public List<UserDto> getSortedUsers(int skip, int limit) {
+    // Very Important!!! Using pagination with sorting
+    public Page<UserDto> getSortedUsers(Pageable pageable) {
+
+        Sort sort = Sort.by("name").ascending()
+                .and(Sort.by("email").descending());
+
+        Pageable sortedPageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), sort);
+
+        // With Pageable we don't need .stream()!!! (It's an exception to the rule)
+        return userRepository.findAll(sortedPageable)
+                .map(user -> modelMapper.map(user, UserDto.class));
+    }
+
+    // Manually sorting and achieving pagination
+    public List<UserDto> getManuallySortedUsers(int skip, int limit) {
 
         List<User> users = userRepository.findAll();
 
