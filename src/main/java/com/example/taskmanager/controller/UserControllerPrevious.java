@@ -42,6 +42,11 @@ public class UserControllerPrevious {
 //        return ResponseEntity.ok(usersDtos);
 //    }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<UserDto> getUserById(@PathVariable Long id) {
+        return ResponseEntity.ok(userServicePrevious.getUserById(id));
+    }
+
     @GetMapping("/exists/{email}")
     public ResponseEntity<Boolean> emailExists(@PathVariable String email) {
         return ResponseEntity.ok(userServicePrevious.checkIfUserExists(email));
