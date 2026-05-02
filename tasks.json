@@ -5,12 +5,43 @@
       "status":"PENDING"
    },
    {
-      "title":"",
-      "description":"Finish Udemy course",
-      "status":"PENDING"
+      "title":"Set up PostgreSQL database",
+      "description":"Install and configure PostgreSQL locally",
+      "status":"NEW"
    },
    {
-      "description":"Finish Udemy course",
+      "title":"Design task entity",
+      "description":"Create JPA entity for tasks",
+      "status":"COMPLETED"
+   },
+   {
+      "title":"Implement task repository",
+      "description":"Create Spring Data JPA repository",
+      "status":"COMPLETED"
+   },
+   {
+      "title":"Create task service layer",
+      "description":"Add business logic for task management",
+      "status":"IN_PROGRESS"
+   },
+   {
+      "title":"Build task REST controller",
+      "description":"Expose CRUD endpoints for tasks",
+      "status":"IN_PROGRESS"
+   },
+   {
+      "title":"Add task status enum",
+      "description":"Define TaskStatusEnum values",
+      "status":"COMPLETED"
+   },
+   {
+      "title":"Implement create task endpoint",
+      "description":"POST endpoint for creating a new task",
+      "status":"COMPLETED"
+   },
+   {
+      "title":"Implement update task endpoint",
+      "description":"PUT endpoint for updating tasks",
       "status":"PENDING"
    }
 ]

@@ -7,6 +7,10 @@ import com.example.taskmanager.repository.TaskRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import tools.jackson.databind.ObjectMapper;
 
@@ -48,12 +52,13 @@ public class TaskService {
         taskRepository.saveAll(tasks);
     }
 
-    public List<TaskDto> getAllTasks() {
+    public Page<TaskDto> getAllTasks(Pageable pageable) {
 
-        return taskRepository.findAll()
-                .stream()
-                .map(task -> modelMapper.map(task, TaskDto.class))
-                .toList();
+        Sort forcedSort = Sort.by("title").descending();
+        Pageable newPageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), forcedSort);
+
+        return taskRepository.findAll(newPageable)
+                .map(task -> modelMapper.map(task, TaskDto.class));
     }
 
     public TaskDto getTaskById(Integer id) {
