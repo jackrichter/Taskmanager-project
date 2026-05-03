@@ -1,9 +1,11 @@
 package com.example.taskmanager.service;
 
 import com.example.taskmanager.dto.UserDto;
+import com.example.taskmanager.dto.UserDtoPrevious;
 import com.example.taskmanager.exception.UserNotFoundException;
 import com.example.taskmanager.exception.UserNotValidException;
 import com.example.taskmanager.model.User;
+import com.example.taskmanager.model.UserPrevious;
 import com.example.taskmanager.repository.UserRepositoryPrevious;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -27,21 +29,21 @@ public class UserServicePrevious {
     private final UserRepositoryPrevious userRepositoryPrev;
     private final ModelMapper modelMapper;
 
-    public List<UserDto> getAllUsers() {
+    public List<UserDtoPrevious> getAllUsers() {
 
-        List<User> users = userRepositoryPrev.findAll();
+        List<UserPrevious> users = userRepositoryPrev.findAll();
 
-        List<UserDto> userDtos = new ArrayList<>();
+        List<UserDtoPrevious> userDtos = new ArrayList<>();
 
-        for (User user : users) {
-            userDtos.add(modelMapper.map(user, UserDto.class));
+        for (UserPrevious user : users) {
+            userDtos.add(modelMapper.map(user, UserDtoPrevious.class));
         }
 
         return userDtos;
     }
 
     // Very Important!!! Using pagination with sorting
-    public Page<UserDto> getSortedUsers(Pageable pageable) {
+    public Page<UserDtoPrevious> getSortedUsers(Pageable pageable) {
 
         Sort sort = Sort.by("name").ascending()
                 .and(Sort.by("email").descending());
@@ -50,54 +52,54 @@ public class UserServicePrevious {
 
         // With Pageable we don't need .stream()!!! (It's an exception to the rule)
         return userRepositoryPrev.findAll(sortedPageable)
-                .map(user -> modelMapper.map(user, UserDto.class));
+                .map(user -> modelMapper.map(user, UserDtoPrevious.class));
     }
 
     // Manually sorting and achieving pagination
-    public List<UserDto> getManuallySortedUsers(int skip, int limit) {
+    public List<UserDtoPrevious> getManuallySortedUsers(int skip, int limit) {
 
-        List<User> users = userRepositoryPrev.findAll();
+        List<UserPrevious> users = userRepositoryPrev.findAll();
 
         // ATTENTION! This approach works only AFTER all data has been loaded and in memory! Not efficient for pagination of big datasets!
         // Sorting and paging results with streams. Sort by name. If names are equal, sort by email.
         return users.stream()
-                .map(user -> modelMapper.map(user, UserDto.class))
-                .sorted(Comparator.comparing(UserDto::getName).thenComparing(UserDto::getEmail))
+                .map(user -> modelMapper.map(user, UserDtoPrevious.class))
+                .sorted(Comparator.comparing(UserDtoPrevious::getName).thenComparing(UserDtoPrevious::getEmail))
                 .skip(skip)
                 .limit(limit)
                 .toList();
     }
 
-    public UserDto getUserById(Long id) {
+    public UserDtoPrevious getUserById(Integer id) {
 
         log.info("Fetching user with id: {}", id);
 
-        User user = userRepositoryPrev.findById(id).orElseThrow(() -> {
+        UserPrevious user = userRepositoryPrev.findById(id).orElseThrow(() -> {
             log.error("User with id {} not found", id);
             return new UserNotFoundException(id);
         });
         log.debug("Fetched user: {}", user);    // Not in production!
 
-        return modelMapper.map(user, UserDto.class);
+        return modelMapper.map(user, UserDtoPrevious.class);
     }
 
-    public void addUser(UserDto userDto) {
+    public void addUser(UserDtoPrevious userDto) {
         if (userDto == null || userDto.getName() == null || userDto.getName().isBlank() || userDto.getAge() < 0) {
             throw new UserNotValidException();
         }
-        User user = modelMapper.map(userDto, User.class);
+        UserPrevious user = modelMapper.map(userDto, UserPrevious.class);
         userRepositoryPrev.save(user);
     }
 
-    public void updateUser(Long index, UserDto userDto) {
+    public void updateUser(Integer index, UserDtoPrevious userDto) {
         if (userRepositoryPrev.existsById(index)) {
-            userRepositoryPrev.save(modelMapper.map(userDto, User.class));
+            userRepositoryPrev.save(modelMapper.map(userDto, UserPrevious.class));
         } else {
             throw new UserNotFoundException(index);
         }
     }
 
-    public void deleteUser(Long index) {
+    public void deleteUser(Integer index) {
         if (userRepositoryPrev.existsById(index)) {
             userRepositoryPrev.deleteById(index);
         } else {

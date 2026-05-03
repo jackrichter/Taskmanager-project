@@ -1,6 +1,7 @@
 package com.example.taskmanager.controller;
 
 import com.example.taskmanager.dto.UserDto;
+import com.example.taskmanager.dto.UserDtoPrevious;
 import com.example.taskmanager.model.User;
 import com.example.taskmanager.service.UserServicePrevious;
 import lombok.RequiredArgsConstructor;
@@ -20,16 +21,16 @@ public class UserControllerPrevious {
     private final UserServicePrevious userServicePrevious;
 
     @GetMapping
-    public ResponseEntity<List<UserDto>> getAllUsers() {
-        List<UserDto> usersDtos = userServicePrevious.getAllUsers();
+    public ResponseEntity<List<UserDtoPrevious>> getAllUsers() {
+        List<UserDtoPrevious> usersDtos = userServicePrevious.getAllUsers();
         return ResponseEntity.ok(usersDtos);
     }
 
     // GET/user/sorted?page=...&size=...&sort=...,desc/asc Need just one of them for
     // SpringBoot to automatically create a Pageable object!!! (No @RequestBody needed)
     @GetMapping(value = "/sorted")
-    public ResponseEntity<Page<UserDto>> getSortedUsers(Pageable pageable) {
-        Page<UserDto> usersDtos = userServicePrevious.getSortedUsers(pageable);
+    public ResponseEntity<Page<UserDtoPrevious>> getSortedUsers(Pageable pageable) {
+        Page<UserDtoPrevious> usersDtos = userServicePrevious.getSortedUsers(pageable);
         return ResponseEntity.ok(usersDtos);
     }
 
@@ -43,7 +44,7 @@ public class UserControllerPrevious {
 //    }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UserDto> getUserById(@PathVariable Long id) {
+    public ResponseEntity<UserDtoPrevious> getUserById(@PathVariable Integer id) {
         return ResponseEntity.ok(userServicePrevious.getUserById(id));
     }
 
@@ -69,19 +70,19 @@ public class UserControllerPrevious {
     }
 
     @PostMapping
-    public ResponseEntity<Void> addUser(@RequestBody UserDto userDto) {
+    public ResponseEntity<Void> addUser(@RequestBody UserDtoPrevious userDto) {
         userServicePrevious.addUser(userDto);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Void> updateUser(@PathVariable Long id, @RequestBody UserDto userDto) {
+    public ResponseEntity<Void> updateUser(@PathVariable Integer id, @RequestBody UserDtoPrevious userDto) {
         userServicePrevious.updateUser(id, userDto);
         return ResponseEntity.noContent().build();
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteUser(@PathVariable Integer id) {
         userServicePrevious.deleteUser(id);
         return ResponseEntity.noContent().build();
     }
