@@ -76,7 +76,7 @@ public class UserServicePrevious {
 
         UserPrevious user = userRepositoryPrev.findById(id).orElseThrow(() -> {
             log.error("User with id {} not found", id);
-            return new UserNotFoundException(id);
+            return new UserNotFoundException("User not found with id: " + id);
         });
         log.debug("Fetched user: {}", user);    // Not in production!
 
@@ -95,7 +95,7 @@ public class UserServicePrevious {
         if (userRepositoryPrev.existsById(index)) {
             userRepositoryPrev.save(modelMapper.map(userDto, UserPrevious.class));
         } else {
-            throw new UserNotFoundException(index);
+            throw new UserNotFoundException("User not found with id: " + index);
         }
     }
 
@@ -103,7 +103,7 @@ public class UserServicePrevious {
         if (userRepositoryPrev.existsById(index)) {
             userRepositoryPrev.deleteById(index);
         } else {
-            throw new UserNotFoundException(index);
+            throw new UserNotFoundException("User not found with id: " + index);
         }
     }
 
