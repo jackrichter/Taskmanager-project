@@ -31,4 +31,8 @@ public class Task {
 
     @Column(name = "created_at", insertable = false ,nullable = false)
     private LocalDateTime createdAt;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
 }

@@ -1,8 +1,10 @@
 package com.example.taskmanager.service;
 
 import com.example.taskmanager.dto.TaskDto;
+import com.example.taskmanager.dto.TaskWithUserDto;
 import com.example.taskmanager.exception.TaskNotFoundException;
 import com.example.taskmanager.model.Task;
+import com.example.taskmanager.model.User;
 import com.example.taskmanager.repository.TaskRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -61,11 +63,19 @@ public class TaskService {
                 .map(task -> modelMapper.map(task, TaskDto.class));
     }
 
-    public TaskDto getTaskById(Integer id) {
+    public TaskWithUserDto getTaskById(Integer id) {
+        // this code is only for demonstration and doesn't add any value to the code
+        // --- Start
+//         Task task1 = taskRepository.findById(2).get();
+//         TaskDto taskDto = modelMapper.map(task1, TaskDto.class);
+//         User user = task1.getUser();
+        // --- End
 
         return taskRepository.findById(id)
-                .map(task -> modelMapper.map(task, TaskDto.class))
-                .orElseThrow(() -> new TaskNotFoundException("Task not found with id: " + id)); //Because we have an Optional!
+                .map(task -> modelMapper.map(task, TaskWithUserDto.class))
+                .orElseThrow(
+                        () -> new TaskNotFoundException("Task not found with id: " + id)
+                ); //Because we have an Optional!
     }
 
     public TaskDto updateTask(Integer id, TaskDto taskDto) {

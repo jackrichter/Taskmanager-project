@@ -1,6 +1,7 @@
 package com.example.taskmanager.controller;
 
 import com.example.taskmanager.dto.TaskDto;
+import com.example.taskmanager.dto.TaskWithUserDto;
 import com.example.taskmanager.exception.InvalidFieldFormatException;
 import com.example.taskmanager.service.TaskService;
 import jakarta.validation.Valid;
@@ -87,7 +88,7 @@ public class TaskController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<TaskDto> getTaskById(@PathVariable Integer id) {
+    public ResponseEntity<TaskWithUserDto> getTaskById(@PathVariable Integer id) {
         return ResponseEntity.ok(taskService.getTaskById(id));
     }
 

@@ -1,6 +1,5 @@
 package com.example.taskmanager.dto;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
@@ -14,7 +13,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDto {
+public class UserWithTaskDto {
 
     private Integer id;
 
@@ -24,4 +23,6 @@ public class UserDto {
     @NotBlank
     @Email
     private String email;
+
+    private List<TaskDto> tasks;
 }
