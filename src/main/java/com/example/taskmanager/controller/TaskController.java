@@ -7,6 +7,7 @@ import com.example.taskmanager.service.TaskService;
 import jakarta.validation.Valid;
 import jakarta.validation.Validator;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -19,6 +20,7 @@ import tools.jackson.databind.ObjectMapper;
 import java.util.Arrays;
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/tasks")
 @RequiredArgsConstructor
@@ -36,6 +38,9 @@ public class TaskController {
     // MultipartFile represents an uploaded file in a multipart/form-data HTTP request
     @PostMapping(value = "/upload", consumes = "multipart/form-data")
     public ResponseEntity<String> uploadTasks(@RequestParam("file") MultipartFile file) {
+
+        log.info("POST /tasks/upload called with file: {}", file.getOriginalFilename());
+
         try {
             String json = new String(file.getBytes());
 
@@ -50,6 +55,7 @@ public class TaskController {
                     .toList();
 
             if (!validationMessages.isEmpty()) {
+                log.warn("Validation failed while uploading tasks");
                 return ResponseEntity.badRequest().body(String.join("\n", validationMessages));
             }
 
@@ -73,9 +79,12 @@ public class TaskController {
             // Service
             taskService.createMultipleTasks(tasks);
 
+            log.info("Successfully uploaded: {} tasks", tasks.size());
+
             return ResponseEntity.ok("uploaded: " + tasks.size() + " tasks");
 
         } catch (Exception e) {
+            log.error("Failed to upload tasks file");
             throw new InvalidFieldFormatException("Invalid file format");
         }
     }
