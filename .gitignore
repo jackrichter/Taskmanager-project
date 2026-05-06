@@ -32,3 +32,5 @@ build/
 ### VS Code ###
 .vscode/
 /application.log.2026-05-02.0.gz
+/application.log.2026-05-04.0.gz
+/application.log.2026-05-05.0.gz
