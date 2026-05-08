@@ -72,3 +72,40 @@
 2026-05-08T12:52:00.631+02:00  INFO 68424 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-05-08T12:52:00.633+02:00  INFO 68424 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-05-08T12:52:00.996+02:00  INFO 68424 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-08T14:41:47.979+02:00  INFO 56652 --- [taskmanager] [main] c.e.t.TaskmanagerApplicationTests        : Starting TaskmanagerApplicationTests using Java 25.0.2 with PID 56652 (started by Acer in D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager)
+2026-05-08T14:41:47.982+02:00  INFO 56652 --- [taskmanager] [main] c.e.t.TaskmanagerApplicationTests        : No active profile set, falling back to 1 default profile: "default"
+2026-05-08T14:41:48.507+02:00  INFO 56652 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-08T14:41:48.547+02:00  INFO 56652 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 3 JPA repository interfaces.
+2026-05-08T14:41:48.905+02:00  INFO 56652 --- [taskmanager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-08T14:41:48.993+02:00  INFO 56652 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-05-08T14:41:49.505+02:00  INFO 56652 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-08T14:41:49.537+02:00  INFO 56652 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-08T14:41:50.266+02:00  INFO 56652 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@359fa722
+2026-05-08T14:41:50.267+02:00  INFO 56652 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-08T14:41:50.345+02:00  WARN 56652 --- [taskmanager] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-08T14:41:50.535+02:00  INFO 56652 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://aws-1-eu-central-1.pooler.supabase.com:5432/postgres?prepareThreshold=0]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.6
+	Default catalog/schema: postgres/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-08T14:41:51.433+02:00  INFO 56652 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-08T14:41:51.671+02:00  INFO 56652 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-08T14:41:51.748+02:00  INFO 56652 --- [taskmanager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-08T14:41:52.523+02:00  WARN 56652 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-08T14:41:52.842+02:00  INFO 56652 --- [taskmanager] [main] c.e.t.TaskmanagerApplicationTests        : Started TaskmanagerApplicationTests in 5.115 seconds (process running for 6.642)
+2026-05-08T14:41:53.333+02:00  INFO 56652 --- [taskmanager] [main] c.e.t.service.UserServicePrevious        : Updating user null
+2026-05-08T14:41:53.336+02:00  INFO 56652 --- [taskmanager] [main] c.e.t.service.UserServicePrevious        : Deleting user 1
+2026-05-08T14:41:53.342+02:00  INFO 56652 --- [taskmanager] [main] c.e.t.service.UserServicePrevious        : Updating user updatedName
+2026-05-08T14:41:53.371+02:00  INFO 56652 --- [taskmanager] [main] c.e.t.service.UserServicePrevious        : Deleting user 1
+2026-05-08T14:41:53.374+02:00  INFO 56652 --- [taskmanager] [main] c.e.t.service.UserServicePrevious        : Adding user 
+2026-05-08T14:41:53.378+02:00  INFO 56652 --- [taskmanager] [main] c.e.t.service.UserServicePrevious        : Get all users
+2026-05-08T14:41:53.386+02:00  INFO 56652 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-08T14:41:53.388+02:00  INFO 56652 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-08T14:41:53.809+02:00  INFO 56652 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
