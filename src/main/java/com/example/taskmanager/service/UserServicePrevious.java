@@ -16,6 +16,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import tools.jackson.databind.ObjectMapper;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -28,22 +29,36 @@ public class UserServicePrevious {
 
     private final UserRepositoryPrevious userRepositoryPrev;
     private final ModelMapper modelMapper;
+    private final ObjectMapper objectMapper;
 
     public List<UserDtoPrevious> getAllUsers() {
 
+        log.info("Get all users");
+
         List<UserPrevious> users = userRepositoryPrev.findAll();
 
-        List<UserDtoPrevious> userDtos = new ArrayList<>();
-
-        for (UserPrevious user : users) {
-            userDtos.add(modelMapper.map(user, UserDtoPrevious.class));
-        }
-
-        return userDtos;
+        return users.stream()
+                .map(user -> modelMapper.map(user, UserDtoPrevious.class))
+                .toList();
     }
+
+//    public List<UserDtoPrevious> getAllUsers() {
+//
+//        List<UserPrevious> users = userRepositoryPrev.findAll();
+//
+//        List<UserDtoPrevious> userDtos = new ArrayList<>();
+//
+//        for (UserPrevious user : users) {
+//            userDtos.add(modelMapper.map(user, UserDtoPrevious.class));
+//        }
+//
+//        return userDtos;
+//    }
 
     // Very Important!!! Using pagination with sorting
     public Page<UserDtoPrevious> getSortedUsers(Pageable pageable) {
+
+        log.info("Get sorted users");
 
         Sort sort = Sort.by("name").ascending()
                 .and(Sort.by("email").descending());
@@ -84,6 +99,9 @@ public class UserServicePrevious {
     }
 
     public void addUser(UserDtoPrevious userDto) {
+
+        log.info("Adding user {}", userDto.getName());
+
         if (userDto == null || userDto.getName() == null || userDto.getName().isBlank() || userDto.getAge() < 0) {
             throw new UserNotValidException();
         }
@@ -92,6 +110,9 @@ public class UserServicePrevious {
     }
 
     public void updateUser(Integer index, UserDtoPrevious userDto) {
+
+        log.info("Updating user {}", userDto.getName());
+
         if (userRepositoryPrev.existsById(index)) {
             userRepositoryPrev.save(modelMapper.map(userDto, UserPrevious.class));
         } else {
@@ -100,6 +121,9 @@ public class UserServicePrevious {
     }
 
     public void deleteUser(Integer index) {
+
+        log.info("Deleting user {}", index);
+
         if (userRepositoryPrev.existsById(index)) {
             userRepositoryPrev.deleteById(index);
         } else {
@@ -108,7 +132,12 @@ public class UserServicePrevious {
     }
 
     public boolean checkIfUserExists(String email) {
-        return userRepositoryPrev.existsUserByEmail(email);
+        boolean exists = userRepositoryPrev.existsUserByEmail(email);
+
+        if (!exists) {
+            throw new UserNotFoundException("User not found with email: " + email);
+        }
+        return true;
     }
 
     public List<User> getUserByEmail(String email) {
