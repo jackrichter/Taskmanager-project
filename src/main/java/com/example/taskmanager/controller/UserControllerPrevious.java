@@ -3,6 +3,7 @@ package com.example.taskmanager.controller;
 import com.example.taskmanager.dto.UserDto;
 import com.example.taskmanager.dto.UserDtoPrevious;
 import com.example.taskmanager.model.User;
+import com.example.taskmanager.model.UserPrevious;
 import com.example.taskmanager.service.UserServicePrevious;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -54,12 +55,12 @@ public class UserControllerPrevious {
     }
 
     @GetMapping("/email/{email}")
-    public ResponseEntity<List<User>> getByEmail(@PathVariable String email) {
+    public ResponseEntity<List<UserPrevious>> getByEmail(@PathVariable String email) {
         return ResponseEntity.ok(userServicePrevious.getUserByEmail(email));
     }
 
     @GetMapping("/fragment/{email}")
-    public ResponseEntity<List<User>> getAllByEmail(@PathVariable String email) {
+    public ResponseEntity<List<UserPrevious>> getAllByEmail(@PathVariable String email) {
         return ResponseEntity.ok(userServicePrevious.searchByEmailFragment(email));
     }
 

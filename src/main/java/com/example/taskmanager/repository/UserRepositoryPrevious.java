@@ -12,32 +12,32 @@ import java.util.List;
 
 @Repository
 public interface UserRepositoryPrevious extends JpaRepository<UserPrevious, Integer> {
-    List<User> findUserByName(String name);
-    List<User> findUserByEmail(String email);
-    List<User> findUserByAgeGreaterThan(int age);
-    List<User> findUserByAgeGreaterThanOrderByAgeDesc(int age);
+    List<UserPrevious> findUserByName(String name);
+    List<UserPrevious> findUserByEmail(String email);
+    List<UserPrevious> findUserByAgeGreaterThan(int age);
+    List<UserPrevious> findUserByAgeGreaterThanOrderByAgeDesc(int age);
     boolean existsUserByEmail(String email);
 
-    List<User> findUserByNameAndEmail(String name, String email);
+    List<UserPrevious> findUserByNameAndEmail(String name, String email);
 
     @Query("select u from UserPrevious u where u.email = ?1")
-    List<User> getUserByEmail(String email);
+    List<UserPrevious> getUserByEmail(String email);
 
     // Better alternative JPQL!!!
     @Query("select u from UserPrevious u where u.email = :email")
-    List<User> getUserByEmail2(@Param("email") String email);
+    List<UserPrevious> getUserByEmail2(@Param("email") String email);
 
     @Query("select u from UserPrevious u where u.name = :name and u.age > :age")
-    List<User> findByNameAndOlderThan(@Param("name") String name, @Param("age") Integer age);
+    List<UserPrevious> findByNameAndOlderThan(@Param("name") String name, @Param("age") Integer age);
 
     // Native Query (Dependent on the underlying SQL flavor: PostgreSQL, MySQL, etc., so JPQL is to be preferred!)
     @Query(value = "SELECT * FROM users2 WHERE email LIKE '%:?1%'", nativeQuery = true)
-    List<User> searchByEmailFragment(String email);
+    List<UserPrevious> searchByEmailFragment(String email);
 //    @Query("SELECT u FROM User u WHERE u.email LIKE %?1%")
 //    List<User> searchByEmailFragment(String email);
 
     // Updating
-    @Modifying
+@Modifying(clearAutomatically = true)       // Clears the cache automatically while testing!!!
     @Query("UPDATE UserPrevious u SET u.age = :age WHERE u.email = :email")
     void updateUserAgeByEmail(@Param("email") String email, @Param("age") Integer age);
 }

@@ -140,11 +140,11 @@ public class UserServicePrevious {
         return true;
     }
 
-    public List<User> getUserByEmail(String email) {
+    public List<UserPrevious> getUserByEmail(String email) {
         return userRepositoryPrev.getUserByEmail(email);
     }
 
-    public List<User> searchByEmailFragment(String email) {
+    public List<UserPrevious> searchByEmailFragment(String email) {
         return userRepositoryPrev.searchByEmailFragment(email);
     }
 

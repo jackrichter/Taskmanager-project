@@ -21,7 +21,7 @@ public class UserPrevious {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "email")
+    @Column(name = "email", nullable = false)       // nullable = false makes the repository test pass!!!
     private String email;
 
     @Column(name = "age")
