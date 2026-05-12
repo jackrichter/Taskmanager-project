@@ -13,8 +13,13 @@ import lombok.Setter;
 @AllArgsConstructor
 public class UserDtoPrevious {
 
-    private Integer id;
+//    private Integer id;
+
+    @NotBlank
     private String name;
+
+    @Email
     private String email;
+
     private Integer age;
 }
