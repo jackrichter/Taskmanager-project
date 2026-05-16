@@ -4,15 +4,13 @@ import com.example.taskmanager.enums.TaskStatusEnum;
 import com.example.taskmanager.model.User;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class TaskDto {
 
     private Integer id;
