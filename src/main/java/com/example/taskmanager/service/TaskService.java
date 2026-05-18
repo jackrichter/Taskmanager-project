@@ -23,6 +23,7 @@ import java.util.List;
 public class TaskService {
 
     private final TaskRepository taskRepository;
+    private final TaskStatusService taskStatusService;
     private final @Qualifier("customModelMapper") ModelMapper modelMapper;
     private final @Qualifier("customJsonMapper") ObjectMapper objectMapper;
 
@@ -123,6 +124,16 @@ public class TaskService {
         log.info("Task updated successfully with id: {}", updatedTask.getId());
 
         return modelMapper.map(updatedTask, TaskDto.class);
+    }
+
+    public void updateTaskStatus() {
+        List<Task> tasks = taskRepository.findAll();
+
+        tasks.forEach(task -> {
+            task.setTask_status_id(taskStatusService.getByCode(task.getStatus()));
+        });
+
+        taskRepository.saveAll(tasks);
     }
 
     public void deleteTask(Integer id) {

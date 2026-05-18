@@ -29,6 +29,10 @@ public class Task {
     @Enumerated(EnumType.STRING)
     private TaskStatusEnum status;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "task_statuses_id", nullable = false)
+    private TaskStatus task_status_id;
+
     @Column(name = "created_at", insertable = false ,updatable = false)
     private LocalDateTime createdAt;
 
