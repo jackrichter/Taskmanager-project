@@ -25,13 +25,13 @@ public class Task {
     @Column(name = "description", nullable = true)
     private String description;
 
-    @Column(name = "status", nullable = false)
-    @Enumerated(EnumType.STRING)
-    private TaskStatusEnum status;
+//    @Column(name = "status", nullable = false)
+//    @Enumerated(EnumType.STRING)
+//    private TaskStatusEnum status;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "task_statuses_id", nullable = false)
-    private TaskStatus task_status_id;
+    private TaskStatus status;
 
     @Column(name = "created_at", insertable = false ,updatable = false)
     private LocalDateTime createdAt;

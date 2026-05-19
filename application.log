@@ -457,3 +457,53 @@ set client_min_messages = WARNING [42001-240]
 2026-05-18T12:57:01.389+02:00  INFO 37052 --- [taskmanager] [http-nio-8080-exec-8] c.e.t.service.TaskStatusService          : Getting task status 'COMPLETED' from database
 2026-05-18T12:57:01.424+02:00  INFO 37052 --- [taskmanager] [http-nio-8080-exec-8] c.e.t.service.TaskStatusService          : Getting task status 'IN_PROGRESS' from database
 2026-05-18T12:57:01.462+02:00  INFO 37052 --- [taskmanager] [http-nio-8080-exec-8] c.e.t.service.TaskStatusService          : Getting task status 'IN_PROGRESS' from database
+2026-05-18T13:01:22.461+02:00  INFO 37052 --- [taskmanager] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-18T13:01:22.467+02:00  INFO 37052 --- [taskmanager] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-18T13:01:22.470+02:00  INFO 37052 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-18T13:01:22.472+02:00  INFO 37052 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-18T13:01:22.476+02:00  INFO 37052 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-18T20:56:16.933+02:00  INFO 6092 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Starting TaskmanagerApplication using Java 25.0.2 with PID 6092 (D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager\target\classes started by Acer in D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager)
+2026-05-18T20:56:16.937+02:00  INFO 6092 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-05-18T20:56:17.440+02:00  INFO 6092 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-18T20:56:17.480+02:00  INFO 6092 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 4 JPA repository interfaces.
+2026-05-18T20:56:17.855+02:00  INFO 6092 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-18T20:56:17.869+02:00  INFO 6092 --- [taskmanager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-18T20:56:17.870+02:00  INFO 6092 --- [taskmanager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-05-18T20:56:17.912+02:00  INFO 6092 --- [taskmanager] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 941 ms
+2026-05-18T20:56:18.058+02:00  INFO 6092 --- [taskmanager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-18T20:56:18.125+02:00  INFO 6092 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-05-18T20:56:18.525+02:00  INFO 6092 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-18T20:56:18.555+02:00  INFO 6092 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-18T20:56:19.298+02:00  INFO 6092 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@670c171c
+2026-05-18T20:56:19.299+02:00  INFO 6092 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-18T20:56:19.374+02:00  WARN 6092 --- [taskmanager] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-18T20:56:19.569+02:00  INFO 6092 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://aws-1-eu-central-1.pooler.supabase.com:5432/postgres?prepareThreshold=0]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.6
+	Default catalog/schema: postgres/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-18T20:56:20.379+02:00  INFO 6092 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-18T20:56:20.662+02:00  INFO 6092 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-18T20:56:20.718+02:00  INFO 6092 --- [taskmanager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-18T20:56:21.331+02:00  WARN 6092 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-18T20:56:21.552+02:00  INFO 6092 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-18T20:56:21.556+02:00  INFO 6092 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Started TaskmanagerApplication in 4.917 seconds (process running for 7.137)
+2026-05-18T20:56:30.510+02:00  INFO 6092 --- [taskmanager] [http-nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-18T20:56:30.511+02:00  INFO 6092 --- [taskmanager] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-18T20:56:30.512+02:00  INFO 6092 --- [taskmanager] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-18T20:56:30.787+02:00  INFO 6092 --- [taskmanager] [http-nio-8080-exec-5] c.e.t.service.TaskStatusService          : Getting task status 'PENDING' from database
+2026-05-18T20:56:30.880+02:00  INFO 6092 --- [taskmanager] [http-nio-8080-exec-5] c.e.t.service.TaskStatusService          : Getting task status 'NEW' from database
+2026-05-18T20:56:30.916+02:00  INFO 6092 --- [taskmanager] [http-nio-8080-exec-5] c.e.t.service.TaskStatusService          : Getting task status 'COMPLETED' from database
+2026-05-18T20:56:30.955+02:00  INFO 6092 --- [taskmanager] [http-nio-8080-exec-5] c.e.t.service.TaskStatusService          : Getting task status 'IN_PROGRESS' from database
+2026-05-18T20:58:19.487+02:00  INFO 6092 --- [taskmanager] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-18T20:58:19.493+02:00  INFO 6092 --- [taskmanager] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-18T20:58:19.497+02:00  INFO 6092 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-18T20:58:19.499+02:00  INFO 6092 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-18T20:58:19.768+02:00  INFO 6092 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
