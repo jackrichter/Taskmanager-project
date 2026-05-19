@@ -32,6 +32,7 @@ public class TaskService {
         log.info("Creating new task with title: {}", taskDto.getTitle());
 
         Task task = modelMapper.map(taskDto, Task.class);
+        task.setStatus(taskStatusService.getByCode(taskDto.getStatus()));
         task.setCreatedAt(LocalDateTime.now());
         Task savesTask = taskRepository.save(task);
 
@@ -48,7 +49,10 @@ public class TaskService {
 
         log.info("Task created successfully with id {}", savesTask.getId());
 
-        return modelMapper.map(savesTask, TaskDto.class);
+        TaskDto adjustedDto = modelMapper.map(savesTask, TaskDto.class);
+        adjustedDto.setStatus(savesTask.getStatus().getCode());
+
+        return adjustedDto;
     }
 
     public void createMultipleTasks(List<TaskDto> taskDtos) {
@@ -56,7 +60,11 @@ public class TaskService {
         log.info("Creating {} tasks in bulk", taskDtos.size());
 
         List<Task> tasks = taskDtos.stream()
-                .map(taskDto -> modelMapper.map(taskDto, Task.class))
+                .map(taskDto -> {
+                    Task task = modelMapper.map(taskDto, Task.class);
+                    task.setStatus(taskStatusService.getByCode(taskDto.getStatus()));
+                    return task;
+                })
                 .toList();
 
         taskRepository.saveAll(tasks);
@@ -76,7 +84,11 @@ public class TaskService {
         log.info("Fetched {} tasks form database", taskPage.getNumberOfElements());
 
         return taskPage
-                .map(task -> modelMapper.map(task, TaskDto.class));
+                .map(task -> {
+                    TaskDto taskTdo = modelMapper.map(task, TaskDto.class);
+                    taskTdo.setStatus(task.getStatus().getCode());
+                    return taskTdo;
+                });
 
 //        Sort forcedSort = Sort.by("title").descending();
 //        Pageable newPageable = PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), forcedSort);
@@ -98,7 +110,9 @@ public class TaskService {
         return taskRepository.findById(id)
                 .map(task -> {
                     log.debug("Task found: {}", task.getId());
-                    return modelMapper.map(task, TaskWithUserDto.class);
+                    TaskWithUserDto taskTodo = modelMapper.map(task, TaskWithUserDto.class);
+                    taskTodo.setStatus(task.getStatus().getCode());
+                    return taskTodo;
                 })
                 .orElseThrow(() -> {
                     log.error("Task with id: {} not found", id);
@@ -117,24 +131,27 @@ public class TaskService {
 
         existingTask.setTitle(taskDto.getTitle());
         existingTask.setDescription(taskDto.getDescription());
-        existingTask.setStatus(taskDto.getStatus());
+        existingTask.setStatus(taskStatusService.getByCode(taskDto.getStatus()));
 
         Task updatedTask = taskRepository.save(existingTask);
 
         log.info("Task updated successfully with id: {}", updatedTask.getId());
 
-        return modelMapper.map(updatedTask, TaskDto.class);
+        TaskDto returnedDto = modelMapper.map(updatedTask, TaskDto.class);
+        returnedDto.setStatus(updatedTask.getStatus().getCode());
+
+        return returnedDto;
     }
 
-    public void updateTaskStatus() {
-        List<Task> tasks = taskRepository.findAll();
-
-        tasks.forEach(task -> {
-            task.setTask_status_id(taskStatusService.getByCode(task.getStatus()));
-        });
-
-        taskRepository.saveAll(tasks);
-    }
+//    public void updateTaskStatus() {
+//        List<Task> tasks = taskRepository.findAll();
+//
+//        tasks.forEach(task -> {
+//            task.setTask_status_id(taskStatusService.getByCode(task.getStatus()));
+//        });
+//
+//        taskRepository.saveAll(tasks);
+//    }
 
     public void deleteTask(Integer id) {
 

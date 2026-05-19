@@ -5,6 +5,7 @@ import com.example.taskmanager.model.TaskStatus;
 import com.example.taskmanager.repository.TaskStatusRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -14,6 +15,7 @@ public class TaskStatusService {
 
     private final TaskStatusRepository taskStatusRepository;
 
+    @Cacheable("taskStatuses")
     public TaskStatus getByCode(TaskStatusEnum taskStatusEnum) {
         log.info("Getting task status '{}' from database", taskStatusEnum);
 
