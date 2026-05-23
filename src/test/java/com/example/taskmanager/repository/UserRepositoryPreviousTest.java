@@ -1,16 +1,20 @@
 package com.example.taskmanager.repository;
 
 import com.example.taskmanager.model.UserPrevious;
+import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.data.jpa.test.autoconfigure.DataJpaTest;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.test.context.ActiveProfiles;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@DataJpaTest                // Only for repository testing! Test JPQL and Native queries. We use an in memory database (H2).
+@SpringBootTest                 // Context needed as well as a CacheManager Bean in AppConfig
+//@DataJpaTest                 // Only for repository testing! Test JPQL and Native queries. We use an in memory database (H2).
 @ActiveProfiles("test")
 public class UserRepositoryPreviousTest {
 

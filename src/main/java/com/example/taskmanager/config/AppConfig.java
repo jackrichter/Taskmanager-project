@@ -1,11 +1,15 @@
 package com.example.taskmanager.config;
 
 import org.modelmapper.ModelMapper;
+import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import tools.jackson.databind.ObjectMapper;
 
 @Configuration
+@EnableCaching
 public class AppConfig {
 
     @Bean
@@ -16,5 +20,14 @@ public class AppConfig {
     @Bean
     public ObjectMapper customJsonMapper() {
         return new ObjectMapper();
+    }
+
+    @Bean
+    public CacheManager cacheManager() {
+        return new ConcurrentMapCacheManager(
+                "tasks",
+                "users",
+                "taskStatuses"
+        );
     }
 }

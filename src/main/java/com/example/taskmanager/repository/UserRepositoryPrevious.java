@@ -2,6 +2,7 @@ package com.example.taskmanager.repository;
 
 import com.example.taskmanager.model.User;
 import com.example.taskmanager.model.UserPrevious;
+import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -39,5 +40,6 @@ public interface UserRepositoryPrevious extends JpaRepository<UserPrevious, Inte
     // Updating
 @Modifying(clearAutomatically = true)       // Clears the cache automatically while testing!!!
     @Query("UPDATE UserPrevious u SET u.age = :age WHERE u.email = :email")
+@Transactional
     void updateUserAgeByEmail(@Param("email") String email, @Param("age") Integer age);
 }
