@@ -2,8 +2,10 @@ package com.example.taskmanager.service;
 
 import com.example.taskmanager.dto.TaskDto;
 import com.example.taskmanager.dto.TaskWithUserDto;
+import com.example.taskmanager.enums.TaskStatusEnum;
 import com.example.taskmanager.exception.TaskNotFoundException;
 import com.example.taskmanager.model.Task;
+import com.example.taskmanager.model.TaskStatus;
 import com.example.taskmanager.repository.TaskRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -29,6 +31,9 @@ public class TaskServiceTest {
     @Mock
     private ModelMapper modelMapper;
 
+    @Mock
+    private TaskStatusService taskStatusService;
+
     @InjectMocks
     private TaskService taskService;
 
@@ -42,6 +47,10 @@ public class TaskServiceTest {
 
         Task savedTask = new Task();
         savedTask.setId(1);
+        savedTask.setStatus(TaskStatus
+                .builder()
+                .code(TaskStatusEnum.NEW)
+                .build());
 
         TaskDto returnedDto = new TaskDto();
         returnedDto.setTitle("Learn Spring");
@@ -50,6 +59,10 @@ public class TaskServiceTest {
         when(modelMapper.map(inputDto, Task.class)).thenReturn(taskEntity);
         when(taskRepository.save(taskEntity)).thenReturn(savedTask);
         when(modelMapper.map(savedTask, TaskDto.class)).thenReturn(returnedDto);
+        when(taskStatusService.getByCode(returnedDto.getStatus())).thenReturn(TaskStatus
+                .builder()
+                .code(TaskStatusEnum.NEW)
+                .build());
 
         // Invoke the method under test
         TaskDto result = taskService.createTask(inputDto);
@@ -86,9 +99,15 @@ public class TaskServiceTest {
         Pageable pageable = PageRequest.of(0, 5, Sort.by("id"));
 
         Task task = new Task();
+        task.setStatus(TaskStatus
+                .builder()
+                .code(TaskStatusEnum.NEW)
+                .build());
+
         Page<Task> taskPage = new PageImpl<>(List.of(task));
 
         TaskDto dto = new TaskDto();
+        dto.setStatus(TaskStatusEnum.NEW);
 
         // When
         when(taskRepository.findAll(pageable)).thenReturn(taskPage);
@@ -109,9 +128,14 @@ public class TaskServiceTest {
 
         Task task = new Task();
         task.setId(id);
+        task.setStatus(TaskStatus
+                .builder()
+                .code(TaskStatusEnum.NEW)
+                .build());
 
         TaskWithUserDto dto = new TaskWithUserDto();
         dto.setId(id);
+        dto.setStatus(TaskStatusEnum.NEW);
 
         // When
         when(taskRepository.findById(id)).thenReturn(Optional.of(task));
@@ -149,12 +173,20 @@ public class TaskServiceTest {
 
         Task existingTask = new Task();
         existingTask.setId(id);
+        existingTask.setStatus(TaskStatus
+                .builder()
+                .code(TaskStatusEnum.NEW)
+                .build());
 
         TaskDto updateDto = new TaskDto();
         updateDto.setTitle("Updated Title");
 
         Task updatedTask = new Task();
         updatedTask.setId(id);
+        updatedTask.setStatus(TaskStatus
+                .builder()
+                .code(TaskStatusEnum.PENDING)
+                .build());
 
         TaskDto returnedDto = new TaskDto();
         returnedDto.setTitle("Updated Title");

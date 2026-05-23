@@ -2,6 +2,9 @@ package com.example.taskmanager.integration;
 
 import com.example.taskmanager.dto.TaskDto;
 import com.example.taskmanager.enums.TaskStatusEnum;
+import com.example.taskmanager.model.TaskStatus;
+import com.example.taskmanager.repository.TaskStatusRepository;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,6 +15,8 @@ import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 import tools.jackson.databind.ObjectMapper;
+
+import java.util.List;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -28,6 +33,14 @@ public class TaskControllerIntegrationTest {
 
     @Autowired
     private ObjectMapper objectMapper;
+
+    @Autowired
+    private TaskStatusRepository taskStatusRepository;
+
+    @BeforeEach
+    void setUp() {
+        setTaskStatus();
+    }
 
     /* -------------------------------------------------
        POST /tasks
@@ -146,7 +159,8 @@ public class TaskControllerIntegrationTest {
         // Then
         mockMvc.perform(get("/tasks/{id}", created.getId()))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.title").value("Find me"));
+                .andExpect(jsonPath("$.title").value("Find me"))
+                .andExpect(jsonPath("$.status").value("NEW"));
     }
 
     @Test
@@ -182,7 +196,8 @@ public class TaskControllerIntegrationTest {
                         """)
                 )
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.title").value("Updated"));
+                .andExpect(jsonPath("$.title").value("Updated"))
+                .andExpect(jsonPath("$.status").value("PENDING"));
     }
 
     @Test
@@ -231,5 +246,26 @@ public class TaskControllerIntegrationTest {
                 .andReturn()
                 .getResponse()
                 .getContentAsString();
+    }
+
+    private void setTaskStatus() {
+        TaskStatus statusNew = new TaskStatus();
+        statusNew.setCode(TaskStatusEnum.NEW);
+        statusNew.setDescription("New");
+
+        TaskStatus statusPending = new TaskStatus();
+        statusPending.setCode(TaskStatusEnum.PENDING);
+        statusPending.setDescription("Pending");
+
+        TaskStatus statusInProgress = new TaskStatus();
+        statusInProgress.setCode(TaskStatusEnum.IN_PROGRESS);
+        statusInProgress.setDescription("In Progress");
+
+        TaskStatus statusCompleted = new TaskStatus();
+        statusCompleted.setCode(TaskStatusEnum.COMPLETED);
+        statusCompleted.setDescription("Completed");
+
+        // Save these statuses to the TaskStatus table in the H2 database!
+        taskStatusRepository.saveAll(List.of(statusNew, statusPending, statusInProgress, statusCompleted));
     }
 }
