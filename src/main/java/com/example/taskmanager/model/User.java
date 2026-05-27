@@ -26,6 +26,9 @@ public class User {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "password", nullable = false)
+    private String password;
+
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Task> tasks;
 }
