@@ -1,19 +1,46 @@
-2026-05-27T04:50:04.780+02:00  INFO 21528 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Starting TaskmanagerApplication using Java 25.0.2 with PID 21528 (D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager\target\classes started by Acer in D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager)
-2026-05-27T04:50:04.787+02:00  INFO 21528 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-05-27T04:50:05.545+02:00  INFO 21528 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-05-27T04:50:05.599+02:00  INFO 21528 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 4 JPA repository interfaces.
-2026-05-27T04:50:06.054+02:00  INFO 21528 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-05-27T04:50:06.066+02:00  INFO 21528 --- [taskmanager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-27T04:50:06.066+02:00  INFO 21528 --- [taskmanager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
-2026-05-27T04:50:06.107+02:00  INFO 21528 --- [taskmanager] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1273 ms
-2026-05-27T04:50:06.315+02:00  INFO 21528 --- [taskmanager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-05-27T04:50:06.365+02:00  INFO 21528 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
-2026-05-27T04:50:06.728+02:00  INFO 21528 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-05-27T04:50:06.756+02:00  INFO 21528 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-27T04:50:07.604+02:00  INFO 21528 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7d8d671b
-2026-05-27T04:50:07.605+02:00  INFO 21528 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-27T04:50:07.679+02:00  WARN 21528 --- [taskmanager] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-05-27T04:50:07.869+02:00  INFO 21528 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-05-30T04:53:06.884+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h26m2s683ms96µs900ns).
+2026-05-30T04:53:06.930+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@594abf48 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T04:53:06.972+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@21db786b (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T04:53:07.005+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@69eae778 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T04:53:07.051+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@6556b5f2 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T04:53:07.081+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2db0e071 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T04:53:07.131+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@57d2dd8c (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T04:53:07.165+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@69bd2129 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T04:53:07.202+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3914e0c9 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T04:53:07.247+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@130d2cf2 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T04:53:07.297+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@52f2ada2 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T05:22:30.967+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m54s40ms528µs900ns).
+2026-05-30T05:22:31.008+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@52466abc (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T05:22:31.069+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@365a0552 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T05:22:31.124+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@71823186 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T05:22:31.166+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1070b680 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T05:22:31.201+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@af4c879 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T05:22:31.270+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@6ce23ce0 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T05:22:31.323+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@c0c2efb (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T05:22:31.367+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@195d5d4c (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T05:22:31.406+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@35c6f91e (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T05:22:31.441+02:00  WARN 12692 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@483ed67a (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T05:52:36.681+02:00  INFO 12692 --- [taskmanager] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30T05:52:36.694+02:00  INFO 12692 --- [taskmanager] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-30T05:52:36.712+02:00  INFO 12692 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30T05:52:36.722+02:00  INFO 12692 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-30T05:52:36.808+02:00  INFO 12692 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-30T13:14:41.141+02:00  INFO 23728 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Starting TaskmanagerApplication using Java 25.0.2 with PID 23728 (D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager\target\classes started by Acer in D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager)
+2026-05-30T13:14:41.144+02:00  INFO 23728 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-05-30T13:14:41.884+02:00  INFO 23728 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30T13:14:41.933+02:00  INFO 23728 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 4 JPA repository interfaces.
+2026-05-30T13:14:42.412+02:00  INFO 23728 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-30T13:14:42.425+02:00  INFO 23728 --- [taskmanager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30T13:14:42.425+02:00  INFO 23728 --- [taskmanager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-05-30T13:14:42.473+02:00  INFO 23728 --- [taskmanager] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1293 ms
+2026-05-30T13:14:42.701+02:00  INFO 23728 --- [taskmanager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30T13:14:42.759+02:00  INFO 23728 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-05-30T13:14:43.109+02:00  INFO 23728 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30T13:14:43.135+02:00  INFO 23728 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-30T13:14:43.891+02:00  INFO 23728 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1fe7fa16
+2026-05-30T13:14:43.893+02:00  INFO 23728 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-30T13:14:43.975+02:00  WARN 23728 --- [taskmanager] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30T13:14:44.157+02:00  INFO 23728 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:postgresql://aws-1-eu-central-1.pooler.supabase.com:5432/postgres?prepareThreshold=0]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
@@ -25,45 +52,54 @@
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-05-27T04:50:08.699+02:00  INFO 21528 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-05-27T04:50:08.957+02:00  INFO 21528 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T04:50:09.023+02:00  INFO 21528 --- [taskmanager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-05-27T04:50:09.668+02:00  WARN 21528 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-05-27T04:50:09.686+02:00  WARN 21528 --- [taskmanager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+2026-05-30T13:14:44.939+02:00  INFO 23728 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30T13:14:45.166+02:00  INFO 23728 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30T13:14:45.223+02:00  INFO 23728 --- [taskmanager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30T13:14:45.838+02:00  WARN 23728 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30T13:14:45.858+02:00  WARN 23728 --- [taskmanager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 8180b715-133c-40f5-bf13-ac86c55b39c5
+Using generated security password: 10ba4355-b543-433a-b3ea-391e31289fd0
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2026-05-27T04:50:09.692+02:00  INFO 21528 --- [taskmanager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-05-27T04:50:10.168+02:00  INFO 21528 --- [taskmanager] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-05-27T04:50:10.228+02:00  INFO 21528 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-05-27T04:50:10.235+02:00  INFO 21528 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Started TaskmanagerApplication in 5.875 seconds (process running for 6.567)
-2026-05-27T04:50:10.241+02:00  INFO 21528 --- [taskmanager] [scheduling-1] c.e.t.service.TaskStatusService          : Cache cleared
-2026-05-27T04:50:10.629+02:00  INFO 21528 --- [taskmanager] [RMI TCP Connection(1)-192.168.0.9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-27T04:50:10.629+02:00  INFO 21528 --- [taskmanager] [RMI TCP Connection(1)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-27T04:50:10.630+02:00  INFO 21528 --- [taskmanager] [RMI TCP Connection(1)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-05-27T04:50:14.122+02:00  INFO 21528 --- [taskmanager] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-27T04:50:14.128+02:00  INFO 21528 --- [taskmanager] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-05-27T04:50:14.133+02:00  INFO 21528 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T04:50:14.134+02:00  INFO 21528 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-27T04:50:14.535+02:00  INFO 21528 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-05-27T04:50:17.240+02:00  INFO 29580 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Starting TaskmanagerApplication using Java 25.0.2 with PID 29580 (D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager\target\classes started by Acer in D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager)
-2026-05-27T04:50:17.244+02:00  INFO 29580 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-05-27T04:50:17.984+02:00  INFO 29580 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-05-27T04:50:18.037+02:00  INFO 29580 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 4 JPA repository interfaces.
-2026-05-27T04:50:18.548+02:00  INFO 29580 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-05-27T04:50:18.559+02:00  INFO 29580 --- [taskmanager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-27T04:50:18.559+02:00  INFO 29580 --- [taskmanager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
-2026-05-27T04:50:18.598+02:00  INFO 29580 --- [taskmanager] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1312 ms
-2026-05-27T04:50:18.855+02:00  INFO 29580 --- [taskmanager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-05-27T04:50:18.922+02:00  INFO 29580 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
-2026-05-27T04:50:19.290+02:00  INFO 29580 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-05-27T04:50:19.315+02:00  INFO 29580 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-27T04:50:19.979+02:00  INFO 29580 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7d95a717
-2026-05-27T04:50:19.981+02:00  INFO 29580 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-27T04:50:20.043+02:00  WARN 29580 --- [taskmanager] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-05-27T04:50:20.214+02:00  INFO 29580 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-05-30T13:14:45.863+02:00  INFO 23728 --- [taskmanager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30T13:14:46.284+02:00  INFO 23728 --- [taskmanager] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30T13:14:46.348+02:00  INFO 23728 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-30T13:14:46.355+02:00  INFO 23728 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Started TaskmanagerApplication in 5.547 seconds (process running for 6.703)
+2026-05-30T13:14:46.362+02:00  INFO 23728 --- [taskmanager] [scheduling-1] c.e.t.service.TaskStatusService          : Cache cleared
+2026-05-30T13:14:46.882+02:00  INFO 23728 --- [taskmanager] [RMI TCP Connection(2)-192.168.0.9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30T13:14:46.882+02:00  INFO 23728 --- [taskmanager] [RMI TCP Connection(2)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-30T13:14:46.884+02:00  INFO 23728 --- [taskmanager] [RMI TCP Connection(2)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-30T13:14:55.172+02:00  WARN 23728 --- [taskmanager] [http-nio-8080-exec-1] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23502
+2026-05-30T13:14:55.173+02:00  WARN 23728 --- [taskmanager] [http-nio-8080-exec-1] org.hibernate.orm.jdbc.error             : ERROR: null value in column "name" of relation "users" violates not-null constraint
+  Detail: Failing row contains (26, null, maria@email.com, $2a$10$iGteI.9KPUu9CS1xhl8CjOadMeN2.oMbNRWKuJfJAiJrY9O1Nn7y2).
+2026-05-30T13:15:38.619+02:00  WARN 23728 --- [taskmanager] [http-nio-8080-exec-5] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23502
+2026-05-30T13:15:38.620+02:00  WARN 23728 --- [taskmanager] [http-nio-8080-exec-5] org.hibernate.orm.jdbc.error             : ERROR: null value in column "name" of relation "users" violates not-null constraint
+  Detail: Failing row contains (27, null, maria@email.com, $2a$10$JNLQA6lJHC5FQsGZowXSj./XOIAfQT3Ccb9fXKqY3NdKV2eWUGYea).
+2026-05-30T13:15:40.750+02:00  WARN 23728 --- [taskmanager] [http-nio-8080-exec-6] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23502
+2026-05-30T13:15:40.750+02:00  WARN 23728 --- [taskmanager] [http-nio-8080-exec-6] org.hibernate.orm.jdbc.error             : ERROR: null value in column "name" of relation "users" violates not-null constraint
+  Detail: Failing row contains (28, null, maria@email.com, $2a$10$UR7c2cEbyU0D3mPqvPXKXOTwKp5RckjpR4ww733BbJy5AnPYVpm3u).
+2026-05-30T13:15:52.304+02:00  INFO 23728 --- [taskmanager] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30T13:15:52.309+02:00  INFO 23728 --- [taskmanager] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-30T13:15:52.314+02:00  INFO 23728 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30T13:15:52.316+02:00  INFO 23728 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-30T13:15:52.370+02:00  INFO 23728 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-30T13:15:57.958+02:00  INFO 3348 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Starting TaskmanagerApplication using Java 25.0.2 with PID 3348 (D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager\target\classes started by Acer in D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager)
+2026-05-30T13:15:57.962+02:00  INFO 3348 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-05-30T13:15:58.639+02:00  INFO 3348 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30T13:15:58.690+02:00  INFO 3348 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 4 JPA repository interfaces.
+2026-05-30T13:15:59.183+02:00  INFO 3348 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-30T13:15:59.194+02:00  INFO 3348 --- [taskmanager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30T13:15:59.194+02:00  INFO 3348 --- [taskmanager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-05-30T13:15:59.234+02:00  INFO 3348 --- [taskmanager] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1234 ms
+2026-05-30T13:15:59.439+02:00  INFO 3348 --- [taskmanager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30T13:15:59.475+02:00  INFO 3348 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-05-30T13:15:59.838+02:00  INFO 3348 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30T13:15:59.865+02:00  INFO 3348 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-30T13:16:00.510+02:00  INFO 3348 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@18356951
+2026-05-30T13:16:00.511+02:00  INFO 3348 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-30T13:16:00.573+02:00  WARN 3348 --- [taskmanager] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30T13:16:00.728+02:00  INFO 3348 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:postgresql://aws-1-eu-central-1.pooler.supabase.com:5432/postgres?prepareThreshold=0]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
@@ -75,46 +111,49 @@ This generated password is for development use only. Your security configuration
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-05-27T04:50:20.984+02:00  INFO 29580 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-05-27T04:50:21.205+02:00  INFO 29580 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T04:50:21.278+02:00  INFO 29580 --- [taskmanager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-05-27T04:50:21.919+02:00  WARN 29580 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-05-27T04:50:21.946+02:00  WARN 29580 --- [taskmanager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+2026-05-30T13:16:01.518+02:00  INFO 3348 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30T13:16:01.725+02:00  INFO 3348 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30T13:16:01.809+02:00  INFO 3348 --- [taskmanager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30T13:16:02.449+02:00  WARN 3348 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30T13:16:02.474+02:00  WARN 3348 --- [taskmanager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 99ff96ae-9074-4039-843e-2f43f504e094
+Using generated security password: 38b94fee-ef69-4e98-ba9b-83aa346e9831
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2026-05-27T04:50:21.953+02:00  INFO 29580 --- [taskmanager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-05-27T04:50:22.477+02:00  INFO 29580 --- [taskmanager] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-05-27T04:50:22.561+02:00  INFO 29580 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-05-27T04:50:22.570+02:00  INFO 29580 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Started TaskmanagerApplication in 5.721 seconds (process running for 7.071)
-2026-05-27T04:50:22.577+02:00  INFO 29580 --- [taskmanager] [scheduling-1] c.e.t.service.TaskStatusService          : Cache cleared
-2026-05-27T04:50:22.698+02:00  INFO 29580 --- [taskmanager] [RMI TCP Connection(6)-192.168.0.9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-27T04:50:22.698+02:00  INFO 29580 --- [taskmanager] [RMI TCP Connection(6)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-27T04:50:22.700+02:00  INFO 29580 --- [taskmanager] [RMI TCP Connection(6)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-05-27T04:51:16.191+02:00  WARN 29580 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s107ms205µs900ns).
-2026-05-27T04:51:37.564+02:00  INFO 29580 --- [taskmanager] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-27T04:51:37.573+02:00  INFO 29580 --- [taskmanager] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-05-27T04:51:37.578+02:00  INFO 29580 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T04:51:37.581+02:00  INFO 29580 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-27T04:51:37.631+02:00  INFO 29580 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-05-27T04:51:59.333+02:00  INFO 33592 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Starting TaskmanagerApplication using Java 25.0.2 with PID 33592 (D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager\target\classes started by Acer in D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager)
-2026-05-27T04:51:59.338+02:00  INFO 33592 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-05-27T04:52:00.077+02:00  INFO 33592 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-05-27T04:52:00.126+02:00  INFO 33592 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 4 JPA repository interfaces.
-2026-05-27T04:52:00.636+02:00  INFO 33592 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-05-27T04:52:00.648+02:00  INFO 33592 --- [taskmanager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-27T04:52:00.648+02:00  INFO 33592 --- [taskmanager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
-2026-05-27T04:52:00.692+02:00  INFO 33592 --- [taskmanager] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1315 ms
-2026-05-27T04:52:00.915+02:00  INFO 33592 --- [taskmanager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-05-27T04:52:00.973+02:00  INFO 33592 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
-2026-05-27T04:52:01.388+02:00  INFO 33592 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-05-27T04:52:01.422+02:00  INFO 33592 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-27T04:52:02.198+02:00  INFO 33592 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@242ebd3b
-2026-05-27T04:52:02.199+02:00  INFO 33592 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-27T04:52:02.279+02:00  WARN 33592 --- [taskmanager] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-05-27T04:52:02.482+02:00  INFO 33592 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-05-30T13:16:02.481+02:00  INFO 3348 --- [taskmanager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30T13:16:02.984+02:00  INFO 3348 --- [taskmanager] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30T13:16:03.055+02:00  INFO 3348 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-30T13:16:03.064+02:00  INFO 3348 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Started TaskmanagerApplication in 5.448 seconds (process running for 6.624)
+2026-05-30T13:16:03.071+02:00  INFO 3348 --- [taskmanager] [scheduling-1] c.e.t.service.TaskStatusService          : Cache cleared
+2026-05-30T13:16:03.297+02:00  INFO 3348 --- [taskmanager] [RMI TCP Connection(1)-192.168.0.9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30T13:16:03.297+02:00  INFO 3348 --- [taskmanager] [RMI TCP Connection(1)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-30T13:16:03.299+02:00  INFO 3348 --- [taskmanager] [RMI TCP Connection(1)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-30T13:17:26.535+02:00  WARN 3348 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m25s922ms788µs).
+2026-05-30T13:17:26.578+02:00  INFO 3348 --- [taskmanager] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30T13:17:26.631+02:00  WARN 3348 --- [taskmanager] [http-nio-8080-exec-1] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 0, SQLState: 23502
+2026-05-30T13:17:26.631+02:00  WARN 3348 --- [taskmanager] [http-nio-8080-exec-1] org.hibernate.orm.jdbc.error             : ERROR: null value in column "name" of relation "users" violates not-null constraint
+  Detail: Failing row contains (29, null, maria@email.com, $2a$10$mB7SGLczQueFbBResR24I.pCa8EjXp1vMaqrzCHT/tKUNq250Tgs2).
+2026-05-30T13:17:26.737+02:00  INFO 3348 --- [taskmanager] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-30T13:17:26.743+02:00  INFO 3348 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30T13:17:26.745+02:00  INFO 3348 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-30T13:17:26.787+02:00  INFO 3348 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-30T13:19:39.198+02:00  INFO 25896 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Starting TaskmanagerApplication using Java 25.0.2 with PID 25896 (D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager\target\classes started by Acer in D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager)
+2026-05-30T13:19:39.411+02:00  INFO 25896 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-05-30T13:19:39.964+02:00  INFO 25896 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30T13:19:40.008+02:00  INFO 25896 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 4 JPA repository interfaces.
+2026-05-30T13:19:40.366+02:00  INFO 25896 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-30T13:19:40.375+02:00  INFO 25896 --- [taskmanager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30T13:19:40.375+02:00  INFO 25896 --- [taskmanager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-05-30T13:19:40.409+02:00  INFO 25896 --- [taskmanager] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 962 ms
+2026-05-30T13:19:40.579+02:00  INFO 25896 --- [taskmanager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-30T13:19:40.613+02:00  INFO 25896 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-05-30T13:19:40.878+02:00  INFO 25896 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30T13:19:40.899+02:00  INFO 25896 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-30T13:19:41.453+02:00  INFO 25896 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@411933
+2026-05-30T13:19:41.455+02:00  INFO 25896 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-30T13:19:41.507+02:00  WARN 25896 --- [taskmanager] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30T13:19:41.654+02:00  INFO 25896 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:postgresql://aws-1-eu-central-1.pooler.supabase.com:5432/postgres?prepareThreshold=0]
 	Database driver: PostgreSQL JDBC Driver
 	Database dialect: PostgreSQLDialect
@@ -126,793 +165,80 @@ This generated password is for development use only. Your security configuration
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-05-27T04:52:03.402+02:00  INFO 33592 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-05-27T04:52:03.643+02:00  INFO 33592 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T04:52:03.726+02:00  INFO 33592 --- [taskmanager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-05-27T04:52:04.444+02:00  WARN 33592 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-05-27T04:52:04.469+02:00  WARN 33592 --- [taskmanager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
+2026-05-30T13:19:42.293+02:00  INFO 25896 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-30T13:19:42.495+02:00  INFO 25896 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30T13:19:42.546+02:00  INFO 25896 --- [taskmanager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-30T13:19:43.072+02:00  WARN 25896 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30T13:19:43.091+02:00  WARN 25896 --- [taskmanager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: d32a4c19-5dfe-4d6d-8bf0-8583e7a3e47c
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-05-27T04:52:04.476+02:00  INFO 33592 --- [taskmanager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-05-27T04:52:04.994+02:00  INFO 33592 --- [taskmanager] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-05-27T04:52:05.080+02:00  INFO 33592 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-05-27T04:52:05.089+02:00  INFO 33592 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Started TaskmanagerApplication in 6.12 seconds (process running for 7.253)
-2026-05-27T04:52:05.100+02:00  INFO 33592 --- [taskmanager] [scheduling-1] c.e.t.service.TaskStatusService          : Cache cleared
-2026-05-27T04:52:05.617+02:00  INFO 33592 --- [taskmanager] [RMI TCP Connection(2)-192.168.0.9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-27T04:52:05.617+02:00  INFO 33592 --- [taskmanager] [RMI TCP Connection(2)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-27T04:52:05.619+02:00  INFO 33592 --- [taskmanager] [RMI TCP Connection(2)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-05-27T06:55:33.305+02:00  WARN 33592 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7edebb09 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T06:55:33.353+02:00  WARN 33592 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@242ebd3b (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T06:55:33.399+02:00  WARN 33592 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@284553ba (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T06:55:33.400+02:00  WARN 33592 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h52m31s76ms898µs600ns).
-2026-05-27T06:55:33.448+02:00  WARN 33592 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3f761c6c (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T06:55:33.486+02:00  WARN 33592 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@70b06f77 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T06:55:33.521+02:00  WARN 33592 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@48c8df94 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T06:55:33.570+02:00  WARN 33592 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@455e54d (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T06:55:33.626+02:00  WARN 33592 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1b503e5d (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T06:55:33.672+02:00  WARN 33592 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@618b1c41 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T06:55:33.725+02:00  WARN 33592 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@68bcb85d (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T06:56:46.987+02:00  INFO 33592 --- [taskmanager] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-27T06:56:46.994+02:00  INFO 33592 --- [taskmanager] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-05-27T06:56:46.999+02:00  INFO 33592 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T06:56:47.001+02:00  INFO 33592 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-27T06:56:47.041+02:00  INFO 33592 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-05-27T06:56:56.731+02:00  INFO 20684 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Starting TaskmanagerApplication using Java 25.0.2 with PID 20684 (D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager\target\classes started by Acer in D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager)
-2026-05-27T06:56:56.734+02:00  INFO 20684 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-05-27T06:56:57.488+02:00  INFO 20684 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-05-27T06:56:57.537+02:00  INFO 20684 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 4 JPA repository interfaces.
-2026-05-27T06:56:58.055+02:00  INFO 20684 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-05-27T06:56:58.067+02:00  INFO 20684 --- [taskmanager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-27T06:56:58.068+02:00  INFO 20684 --- [taskmanager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
-2026-05-27T06:56:58.113+02:00  INFO 20684 --- [taskmanager] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1337 ms
-2026-05-27T06:56:58.349+02:00  INFO 20684 --- [taskmanager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-05-27T06:56:58.408+02:00  INFO 20684 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
-2026-05-27T06:56:58.822+02:00  INFO 20684 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-05-27T06:56:58.855+02:00  INFO 20684 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-27T06:56:59.570+02:00  INFO 20684 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5a5a973c
-2026-05-27T06:56:59.572+02:00  INFO 20684 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-27T06:56:59.651+02:00  WARN 20684 --- [taskmanager] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-05-27T06:56:59.810+02:00  INFO 20684 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://aws-1-eu-central-1.pooler.supabase.com:5432/postgres?prepareThreshold=0]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.6
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-05-27T06:57:00.692+02:00  INFO 20684 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-05-27T06:57:00.890+02:00  INFO 20684 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T06:57:00.967+02:00  INFO 20684 --- [taskmanager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-05-27T06:57:01.636+02:00  WARN 20684 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-05-27T06:57:01.660+02:00  WARN 20684 --- [taskmanager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 2e495f2a-0e44-412b-ac36-c8f935c1cb4e
+Using generated security password: 8abe72c5-de41-4eb4-9720-1278d1d658fe
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2026-05-27T06:57:01.666+02:00  INFO 20684 --- [taskmanager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-05-27T06:57:02.186+02:00  INFO 20684 --- [taskmanager] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-05-27T06:57:02.255+02:00  INFO 20684 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-05-27T06:57:02.263+02:00  INFO 20684 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Started TaskmanagerApplication in 5.887 seconds (process running for 10.618)
-2026-05-27T06:57:02.271+02:00  INFO 20684 --- [taskmanager] [scheduling-1] c.e.t.service.TaskStatusService          : Cache cleared
-2026-05-27T06:57:02.502+02:00  INFO 20684 --- [taskmanager] [RMI TCP Connection(2)-192.168.0.9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-27T06:57:02.503+02:00  INFO 20684 --- [taskmanager] [RMI TCP Connection(2)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-27T06:57:02.504+02:00  INFO 20684 --- [taskmanager] [RMI TCP Connection(2)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-05-27T06:58:57.495+02:00  INFO 20684 --- [taskmanager] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-27T06:58:57.501+02:00  INFO 20684 --- [taskmanager] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-05-27T06:58:57.507+02:00  INFO 20684 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T06:58:57.509+02:00  INFO 20684 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-27T06:58:57.617+02:00  INFO 20684 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-05-27T06:59:47.767+02:00  INFO 30608 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Starting TaskmanagerApplication using Java 25.0.2 with PID 30608 (D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager\target\classes started by Acer in D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager)
-2026-05-27T06:59:47.771+02:00  INFO 30608 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-05-27T06:59:48.464+02:00  INFO 30608 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-05-27T06:59:48.511+02:00  INFO 30608 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 4 JPA repository interfaces.
-2026-05-27T06:59:48.993+02:00  INFO 30608 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-05-27T06:59:49.006+02:00  INFO 30608 --- [taskmanager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-27T06:59:49.006+02:00  INFO 30608 --- [taskmanager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
-2026-05-27T06:59:49.048+02:00  INFO 30608 --- [taskmanager] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1239 ms
-2026-05-27T06:59:49.248+02:00  INFO 30608 --- [taskmanager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-05-27T06:59:49.285+02:00  INFO 30608 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
-2026-05-27T06:59:49.647+02:00  INFO 30608 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-05-27T06:59:49.673+02:00  INFO 30608 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-27T06:59:50.341+02:00  INFO 30608 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@70efdd18
-2026-05-27T06:59:50.342+02:00  INFO 30608 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-27T06:59:50.414+02:00  WARN 30608 --- [taskmanager] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-05-27T06:59:50.589+02:00  INFO 30608 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://aws-1-eu-central-1.pooler.supabase.com:5432/postgres?prepareThreshold=0]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.6
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-05-27T06:59:51.370+02:00  INFO 30608 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-05-27T06:59:51.573+02:00  INFO 30608 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T06:59:51.638+02:00  INFO 30608 --- [taskmanager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-05-27T06:59:52.270+02:00  WARN 30608 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-05-27T06:59:52.293+02:00  WARN 30608 --- [taskmanager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 288265f1-ce54-4063-a48e-2625186a2cc9
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-05-27T06:59:52.304+02:00  INFO 30608 --- [taskmanager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-05-27T06:59:52.786+02:00  INFO 30608 --- [taskmanager] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-05-27T06:59:52.864+02:00  INFO 30608 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-05-27T06:59:52.873+02:00  INFO 30608 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Started TaskmanagerApplication in 5.44 seconds (process running for 6.4)
-2026-05-27T06:59:52.880+02:00  INFO 30608 --- [taskmanager] [scheduling-1] c.e.t.service.TaskStatusService          : Cache cleared
-2026-05-27T06:59:53.200+02:00  INFO 30608 --- [taskmanager] [RMI TCP Connection(1)-192.168.0.9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-27T06:59:53.201+02:00  INFO 30608 --- [taskmanager] [RMI TCP Connection(1)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-27T06:59:53.202+02:00  INFO 30608 --- [taskmanager] [RMI TCP Connection(1)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-05-27T07:09:56.575+02:00  WARN 30608 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m6s131ms405µs).
-2026-05-27T07:09:56.619+02:00  INFO 30608 --- [taskmanager] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-27T07:09:56.626+02:00  INFO 30608 --- [taskmanager] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-05-27T07:09:56.632+02:00  INFO 30608 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T07:09:56.634+02:00  INFO 30608 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-27T07:09:56.725+02:00  INFO 30608 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-05-27T07:10:02.648+02:00  INFO 32164 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Starting TaskmanagerApplication using Java 25.0.2 with PID 32164 (D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager\target\classes started by Acer in D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager)
-2026-05-27T07:10:02.652+02:00  INFO 32164 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-05-27T07:10:03.361+02:00  INFO 32164 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-05-27T07:10:03.406+02:00  INFO 32164 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 4 JPA repository interfaces.
-2026-05-27T07:10:03.876+02:00  INFO 32164 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-05-27T07:10:03.893+02:00  INFO 32164 --- [taskmanager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-27T07:10:03.894+02:00  INFO 32164 --- [taskmanager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
-2026-05-27T07:10:03.932+02:00  INFO 32164 --- [taskmanager] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1241 ms
-2026-05-27T07:10:04.134+02:00  INFO 32164 --- [taskmanager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-05-27T07:10:04.169+02:00  INFO 32164 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
-2026-05-27T07:10:04.528+02:00  INFO 32164 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-05-27T07:10:04.553+02:00  INFO 32164 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-27T07:10:05.214+02:00  INFO 32164 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@242ebd3b
-2026-05-27T07:10:05.216+02:00  INFO 32164 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-27T07:10:05.277+02:00  WARN 32164 --- [taskmanager] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-05-27T07:10:05.450+02:00  INFO 32164 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://aws-1-eu-central-1.pooler.supabase.com:5432/postgres?prepareThreshold=0]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.6
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-05-27T07:10:06.192+02:00  INFO 32164 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-05-27T07:10:06.384+02:00  INFO 32164 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T07:10:06.457+02:00  INFO 32164 --- [taskmanager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-05-27T07:10:07.095+02:00  WARN 32164 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-05-27T07:10:07.119+02:00  WARN 32164 --- [taskmanager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 999da361-0487-4ce6-864e-f92165b66d16
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-05-27T07:10:07.125+02:00  INFO 32164 --- [taskmanager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-05-27T07:10:07.617+02:00  INFO 32164 --- [taskmanager] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-05-27T07:10:07.687+02:00  INFO 32164 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-05-27T07:10:07.695+02:00  INFO 32164 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Started TaskmanagerApplication in 5.413 seconds (process running for 6.482)
-2026-05-27T07:10:07.703+02:00  INFO 32164 --- [taskmanager] [scheduling-1] c.e.t.service.TaskStatusService          : Cache cleared
-2026-05-27T07:10:07.952+02:00  INFO 32164 --- [taskmanager] [RMI TCP Connection(5)-192.168.0.9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-27T07:10:07.952+02:00  INFO 32164 --- [taskmanager] [RMI TCP Connection(5)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-27T07:10:07.955+02:00  INFO 32164 --- [taskmanager] [RMI TCP Connection(5)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-05-27T07:10:26.843+02:00  INFO 32164 --- [taskmanager] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-27T07:10:26.900+02:00  INFO 32164 --- [taskmanager] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-05-27T07:10:26.907+02:00  INFO 32164 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T07:10:26.909+02:00  INFO 32164 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-27T07:10:27.323+02:00  INFO 32164 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-05-27T07:10:36.701+02:00  INFO 33396 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Starting TaskmanagerApplication using Java 25.0.2 with PID 33396 (D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager\target\classes started by Acer in D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager)
-2026-05-27T07:10:36.705+02:00  INFO 33396 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-05-27T07:10:37.414+02:00  INFO 33396 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-05-27T07:10:37.465+02:00  INFO 33396 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 4 JPA repository interfaces.
-2026-05-27T07:10:37.963+02:00  INFO 33396 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-05-27T07:10:37.975+02:00  INFO 33396 --- [taskmanager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-27T07:10:37.976+02:00  INFO 33396 --- [taskmanager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
-2026-05-27T07:10:38.022+02:00  INFO 33396 --- [taskmanager] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1273 ms
-2026-05-27T07:10:38.222+02:00  INFO 33396 --- [taskmanager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-05-27T07:10:38.259+02:00  INFO 33396 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
-2026-05-27T07:10:38.615+02:00  INFO 33396 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-05-27T07:10:38.641+02:00  INFO 33396 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-27T07:10:39.303+02:00  INFO 33396 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@41433530
-2026-05-27T07:10:39.304+02:00  INFO 33396 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-27T07:10:39.367+02:00  WARN 33396 --- [taskmanager] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-05-27T07:10:39.536+02:00  INFO 33396 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://aws-1-eu-central-1.pooler.supabase.com:5432/postgres?prepareThreshold=0]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.6
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-05-27T07:10:40.295+02:00  INFO 33396 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-05-27T07:10:40.481+02:00  INFO 33396 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T07:10:40.550+02:00  INFO 33396 --- [taskmanager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-05-27T07:10:41.181+02:00  WARN 33396 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-05-27T07:10:41.204+02:00  WARN 33396 --- [taskmanager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 78af1fb5-9369-437d-bd4a-7b99bbc846b7
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-05-27T07:10:41.211+02:00  INFO 33396 --- [taskmanager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-05-27T07:10:41.702+02:00  INFO 33396 --- [taskmanager] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-05-27T07:10:41.774+02:00  INFO 33396 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-05-27T07:10:41.782+02:00  INFO 33396 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Started TaskmanagerApplication in 5.418 seconds (process running for 6.377)
-2026-05-27T07:10:41.789+02:00  INFO 33396 --- [taskmanager] [scheduling-1] c.e.t.service.TaskStatusService          : Cache cleared
-2026-05-27T07:10:42.108+02:00  INFO 33396 --- [taskmanager] [RMI TCP Connection(4)-192.168.0.9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-27T07:10:42.109+02:00  INFO 33396 --- [taskmanager] [RMI TCP Connection(4)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-27T07:10:42.110+02:00  INFO 33396 --- [taskmanager] [RMI TCP Connection(4)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-05-27T08:26:55.231+02:00  WARN 33396 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h16m15s820ms665µs100ns).
-2026-05-27T08:26:55.294+02:00  INFO 33396 --- [taskmanager] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-27T08:26:55.305+02:00  WARN 33396 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5946f739 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T08:26:55.342+02:00  WARN 33396 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@a14d7d0 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T08:26:55.375+02:00  WARN 33396 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@344ee6b7 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T08:26:55.405+02:00  WARN 33396 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3f120b51 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T08:26:55.409+02:00  INFO 33396 --- [taskmanager] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-05-27T08:26:55.419+02:00  INFO 33396 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T08:26:55.425+02:00  INFO 33396 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-27T08:26:55.440+02:00  WARN 33396 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@344b48fd (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T08:26:55.737+02:00  INFO 33396 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-05-27T08:35:03.923+02:00  INFO 22796 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Starting TaskmanagerApplication using Java 25.0.2 with PID 22796 (D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager\target\classes started by Acer in D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager)
-2026-05-27T08:35:03.927+02:00  INFO 22796 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-05-27T08:35:04.685+02:00  INFO 22796 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-05-27T08:35:04.741+02:00  INFO 22796 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 4 JPA repository interfaces.
-2026-05-27T08:35:05.210+02:00  INFO 22796 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-05-27T08:35:05.220+02:00  INFO 22796 --- [taskmanager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-27T08:35:05.220+02:00  INFO 22796 --- [taskmanager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
-2026-05-27T08:35:05.263+02:00  INFO 22796 --- [taskmanager] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1284 ms
-2026-05-27T08:35:05.465+02:00  INFO 22796 --- [taskmanager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-05-27T08:35:05.520+02:00  INFO 22796 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
-2026-05-27T08:35:05.872+02:00  INFO 22796 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-05-27T08:35:05.902+02:00  INFO 22796 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-27T08:35:06.624+02:00  INFO 22796 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@76208b80
-2026-05-27T08:35:06.626+02:00  INFO 22796 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-27T08:35:06.703+02:00  WARN 22796 --- [taskmanager] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-05-27T08:35:06.880+02:00  INFO 22796 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://aws-1-eu-central-1.pooler.supabase.com:5432/postgres?prepareThreshold=0]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.6
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-05-27T08:35:07.638+02:00  INFO 22796 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-05-27T08:35:07.865+02:00  INFO 22796 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T08:35:07.930+02:00  INFO 22796 --- [taskmanager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-05-27T08:35:08.579+02:00  WARN 22796 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-05-27T08:35:08.602+02:00  WARN 22796 --- [taskmanager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 9697d518-8d8e-4d66-958e-13534a09db4c
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-05-27T08:35:08.608+02:00  INFO 22796 --- [taskmanager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-05-27T08:35:09.077+02:00  INFO 22796 --- [taskmanager] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-05-27T08:35:09.133+02:00  INFO 22796 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-05-27T08:35:09.139+02:00  INFO 22796 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Started TaskmanagerApplication in 5.606 seconds (process running for 6.179)
-2026-05-27T08:35:09.146+02:00  INFO 22796 --- [taskmanager] [scheduling-1] c.e.t.service.TaskStatusService          : Cache cleared
-2026-05-27T08:35:09.670+02:00  INFO 22796 --- [taskmanager] [RMI TCP Connection(2)-192.168.0.9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-27T08:35:09.671+02:00  INFO 22796 --- [taskmanager] [RMI TCP Connection(2)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-27T08:35:09.672+02:00  INFO 22796 --- [taskmanager] [RMI TCP Connection(2)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-05-27T08:35:55.562+02:00  INFO 22796 --- [taskmanager] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-27T08:35:55.568+02:00  INFO 22796 --- [taskmanager] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-05-27T08:35:55.574+02:00  INFO 22796 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T08:35:55.575+02:00  INFO 22796 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-27T08:35:55.990+02:00  INFO 22796 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-05-27T08:36:02.087+02:00  INFO 28536 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Starting TaskmanagerApplication using Java 25.0.2 with PID 28536 (D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager\target\classes started by Acer in D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager)
-2026-05-27T08:36:02.091+02:00  INFO 28536 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-05-27T08:36:02.784+02:00  INFO 28536 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-05-27T08:36:02.830+02:00  INFO 28536 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 4 JPA repository interfaces.
-2026-05-27T08:36:03.334+02:00  INFO 28536 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-05-27T08:36:03.345+02:00  INFO 28536 --- [taskmanager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-27T08:36:03.346+02:00  INFO 28536 --- [taskmanager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
-2026-05-27T08:36:03.392+02:00  INFO 28536 --- [taskmanager] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1262 ms
-2026-05-27T08:36:03.596+02:00  INFO 28536 --- [taskmanager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-05-27T08:36:03.632+02:00  INFO 28536 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
-2026-05-27T08:36:04.016+02:00  INFO 28536 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-05-27T08:36:04.042+02:00  INFO 28536 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-27T08:36:04.738+02:00  INFO 28536 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@43b7bd5a
-2026-05-27T08:36:04.739+02:00  INFO 28536 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-27T08:36:04.800+02:00  WARN 28536 --- [taskmanager] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-05-27T08:36:04.972+02:00  INFO 28536 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://aws-1-eu-central-1.pooler.supabase.com:5432/postgres?prepareThreshold=0]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.6
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-05-27T08:36:05.757+02:00  INFO 28536 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-05-27T08:36:05.951+02:00  INFO 28536 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T08:36:06.013+02:00  INFO 28536 --- [taskmanager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-05-27T08:36:06.641+02:00  WARN 28536 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-05-27T08:36:06.665+02:00  WARN 28536 --- [taskmanager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: a43aa1a8-dddb-4573-8d56-c996a53d0703
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-05-27T08:36:06.672+02:00  INFO 28536 --- [taskmanager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-05-27T08:36:07.214+02:00  INFO 28536 --- [taskmanager] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-05-27T08:36:07.288+02:00  INFO 28536 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-05-27T08:36:07.297+02:00  INFO 28536 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Started TaskmanagerApplication in 5.567 seconds (process running for 6.74)
-2026-05-27T08:36:07.304+02:00  INFO 28536 --- [taskmanager] [scheduling-1] c.e.t.service.TaskStatusService          : Cache cleared
-2026-05-27T08:36:07.790+02:00  INFO 28536 --- [taskmanager] [RMI TCP Connection(3)-192.168.0.9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-27T08:36:07.791+02:00  INFO 28536 --- [taskmanager] [RMI TCP Connection(3)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-27T08:36:07.793+02:00  INFO 28536 --- [taskmanager] [RMI TCP Connection(3)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-05-27T08:36:23.397+02:00  INFO 28536 --- [taskmanager] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-27T08:36:23.405+02:00  INFO 28536 --- [taskmanager] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-05-27T08:36:23.410+02:00  INFO 28536 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T08:36:23.412+02:00  INFO 28536 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-27T08:36:23.816+02:00  INFO 28536 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-05-27T08:37:08.408+02:00  INFO 34152 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Starting TaskmanagerApplication using Java 25.0.2 with PID 34152 (D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager\target\classes started by Acer in D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager)
-2026-05-27T08:37:08.412+02:00  INFO 34152 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-05-27T08:37:09.076+02:00  INFO 34152 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-05-27T08:37:09.121+02:00  INFO 34152 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 4 JPA repository interfaces.
-2026-05-27T08:37:09.584+02:00  INFO 34152 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-05-27T08:37:09.595+02:00  INFO 34152 --- [taskmanager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-27T08:37:09.595+02:00  INFO 34152 --- [taskmanager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
-2026-05-27T08:37:09.641+02:00  INFO 34152 --- [taskmanager] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1192 ms
-2026-05-27T08:37:09.840+02:00  INFO 34152 --- [taskmanager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-05-27T08:37:09.878+02:00  INFO 34152 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
-2026-05-27T08:37:10.229+02:00  INFO 34152 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-05-27T08:37:10.254+02:00  INFO 34152 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-27T08:37:10.888+02:00  INFO 34152 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@41433530
-2026-05-27T08:37:10.889+02:00  INFO 34152 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-27T08:37:10.957+02:00  WARN 34152 --- [taskmanager] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-05-27T08:37:11.111+02:00  INFO 34152 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://aws-1-eu-central-1.pooler.supabase.com:5432/postgres?prepareThreshold=0]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.6
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-05-27T08:37:11.889+02:00  INFO 34152 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-05-27T08:37:12.091+02:00  INFO 34152 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T08:37:12.153+02:00  INFO 34152 --- [taskmanager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-05-27T08:37:12.772+02:00  WARN 34152 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-05-27T08:37:12.795+02:00  WARN 34152 --- [taskmanager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: db800e6e-4bde-49d2-a0e4-78c0c05e6430
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-05-27T08:37:12.802+02:00  INFO 34152 --- [taskmanager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-05-27T08:37:13.297+02:00  INFO 34152 --- [taskmanager] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-05-27T08:37:13.378+02:00  INFO 34152 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-05-27T08:37:13.386+02:00  INFO 34152 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Started TaskmanagerApplication in 5.313 seconds (process running for 6.287)
-2026-05-27T08:37:13.393+02:00  INFO 34152 --- [taskmanager] [scheduling-1] c.e.t.service.TaskStatusService          : Cache cleared
-2026-05-27T08:37:13.795+02:00  INFO 34152 --- [taskmanager] [RMI TCP Connection(1)-192.168.0.9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-27T08:37:13.796+02:00  INFO 34152 --- [taskmanager] [RMI TCP Connection(1)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-27T08:37:13.797+02:00  INFO 34152 --- [taskmanager] [RMI TCP Connection(1)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-05-27T08:37:34.596+02:00  INFO 34152 --- [taskmanager] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-27T08:37:34.602+02:00  INFO 34152 --- [taskmanager] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-05-27T08:37:34.606+02:00  INFO 34152 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T08:37:34.608+02:00  INFO 34152 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-27T08:37:34.987+02:00  INFO 34152 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-05-27T08:38:59.257+02:00  INFO 32776 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Starting TaskmanagerApplication using Java 25.0.2 with PID 32776 (D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager\target\classes started by Acer in D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager)
-2026-05-27T08:38:59.261+02:00  INFO 32776 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-05-27T08:38:59.916+02:00  INFO 32776 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-05-27T08:38:59.962+02:00  INFO 32776 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 4 JPA repository interfaces.
-2026-05-27T08:39:00.430+02:00  INFO 32776 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-05-27T08:39:00.441+02:00  INFO 32776 --- [taskmanager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-27T08:39:00.441+02:00  INFO 32776 --- [taskmanager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
-2026-05-27T08:39:00.479+02:00  INFO 32776 --- [taskmanager] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1180 ms
-2026-05-27T08:39:00.686+02:00  INFO 32776 --- [taskmanager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-05-27T08:39:00.721+02:00  INFO 32776 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
-2026-05-27T08:39:01.072+02:00  INFO 32776 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-05-27T08:39:01.098+02:00  INFO 32776 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-27T08:39:01.751+02:00  INFO 32776 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1af78e37
-2026-05-27T08:39:01.752+02:00  INFO 32776 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-27T08:39:01.817+02:00  WARN 32776 --- [taskmanager] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-05-27T08:39:01.998+02:00  INFO 32776 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://aws-1-eu-central-1.pooler.supabase.com:5432/postgres?prepareThreshold=0]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.6
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-05-27T08:39:02.754+02:00  INFO 32776 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-05-27T08:39:02.941+02:00  INFO 32776 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T08:39:03.008+02:00  INFO 32776 --- [taskmanager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-05-27T08:39:03.647+02:00  WARN 32776 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-05-27T08:39:03.672+02:00  WARN 32776 --- [taskmanager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: 6a707504-b282-472d-8dc0-632959e23f06
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-05-27T08:39:03.679+02:00  INFO 32776 --- [taskmanager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-05-27T08:39:04.195+02:00  INFO 32776 --- [taskmanager] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-05-27T08:39:04.267+02:00  INFO 32776 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-05-27T08:39:04.279+02:00  INFO 32776 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Started TaskmanagerApplication in 5.358 seconds (process running for 6.287)
-2026-05-27T08:39:04.287+02:00  INFO 32776 --- [taskmanager] [scheduling-1] c.e.t.service.TaskStatusService          : Cache cleared
-2026-05-27T08:39:04.687+02:00  INFO 32776 --- [taskmanager] [RMI TCP Connection(1)-192.168.0.9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-27T08:39:04.688+02:00  INFO 32776 --- [taskmanager] [RMI TCP Connection(1)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-27T08:39:04.690+02:00  INFO 32776 --- [taskmanager] [RMI TCP Connection(1)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-05-27T08:39:47.724+02:00  INFO 32776 --- [taskmanager] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-27T08:39:47.729+02:00  INFO 32776 --- [taskmanager] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-05-27T08:39:47.734+02:00  INFO 32776 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T08:39:47.736+02:00  INFO 32776 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-27T08:39:48.086+02:00  INFO 32776 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-05-27T08:39:55.197+02:00  INFO 11912 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Starting TaskmanagerApplication using Java 25.0.2 with PID 11912 (D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager\target\classes started by Acer in D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager)
-2026-05-27T08:39:55.200+02:00  INFO 11912 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-05-27T08:39:55.873+02:00  INFO 11912 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-05-27T08:39:55.929+02:00  INFO 11912 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 4 JPA repository interfaces.
-2026-05-27T08:39:56.429+02:00  INFO 11912 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-05-27T08:39:56.441+02:00  INFO 11912 --- [taskmanager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-27T08:39:56.441+02:00  INFO 11912 --- [taskmanager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
-2026-05-27T08:39:56.483+02:00  INFO 11912 --- [taskmanager] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1246 ms
-2026-05-27T08:39:56.695+02:00  INFO 11912 --- [taskmanager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-05-27T08:39:56.738+02:00  INFO 11912 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
-2026-05-27T08:39:57.108+02:00  INFO 11912 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-05-27T08:39:57.135+02:00  INFO 11912 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-27T08:39:57.746+02:00  INFO 11912 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@28dd8786
-2026-05-27T08:39:57.747+02:00  INFO 11912 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-27T08:39:57.811+02:00  WARN 11912 --- [taskmanager] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-05-27T08:39:57.971+02:00  INFO 11912 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://aws-1-eu-central-1.pooler.supabase.com:5432/postgres?prepareThreshold=0]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.6
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-05-27T08:39:58.715+02:00  INFO 11912 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-05-27T08:39:58.897+02:00  INFO 11912 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T08:39:58.963+02:00  INFO 11912 --- [taskmanager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-05-27T08:39:59.597+02:00  WARN 11912 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-05-27T08:39:59.620+02:00  WARN 11912 --- [taskmanager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: ff558ef2-7684-4d82-b54d-88d3f12e7909
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-05-27T08:39:59.627+02:00  INFO 11912 --- [taskmanager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-05-27T08:40:00.127+02:00  INFO 11912 --- [taskmanager] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-05-27T08:40:00.193+02:00  INFO 11912 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-05-27T08:40:00.201+02:00  INFO 11912 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Started TaskmanagerApplication in 5.341 seconds (process running for 6.282)
-2026-05-27T08:40:00.208+02:00  INFO 11912 --- [taskmanager] [scheduling-1] c.e.t.service.TaskStatusService          : Cache cleared
-2026-05-27T08:40:00.617+02:00  INFO 11912 --- [taskmanager] [RMI TCP Connection(3)-192.168.0.9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-27T08:40:00.617+02:00  INFO 11912 --- [taskmanager] [RMI TCP Connection(3)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-27T08:40:00.619+02:00  INFO 11912 --- [taskmanager] [RMI TCP Connection(3)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-05-27T08:46:22.111+02:00  INFO 11912 --- [taskmanager] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-27T08:46:22.164+02:00  WARN 11912 --- [taskmanager] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Failure in @ExceptionHandler com.example.taskmanager.exception.GlobalExceptionHandler#handleAllExceptions(Exception)
-
-org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class com.example.taskmanager.exception.ErrorResponse] with preset Content-Type 'text/plain;charset=UTF-8'
-	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:363) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:261) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.20.jar:6.1]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.20.jar:6.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.20.jar:11.0.20]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:493) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:354) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:86) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:132) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:198) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:337) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.4.jar:7.0.4]
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
-
-2026-05-27T08:46:22.225+02:00  WARN 11912 --- [taskmanager] [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Failure in @ExceptionHandler com.example.taskmanager.exception.GlobalExceptionHandler#handleAllExceptions(Exception)
-
-org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class com.example.taskmanager.exception.ErrorResponse] with preset Content-Type 'text/plain;charset=UTF-8'
-	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:363) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:261) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:460) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:72) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:176) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:78) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1227) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1035) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:980) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.20.jar:6.1]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.6.jar:7.0.6]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.20.jar:6.1]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.20.jar:11.0.20]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:493) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:354) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:86) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:132) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:198) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:231) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:244) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:337) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:141) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.4.jar:7.0.4]
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.4.jar:7.0.4]
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:110) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
-	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
-
-2026-05-27T08:46:22.271+02:00  INFO 11912 --- [taskmanager] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-05-27T08:46:22.280+02:00  INFO 11912 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T08:46:22.282+02:00  INFO 11912 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-27T08:46:22.567+02:00  INFO 11912 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2026-05-27T08:47:03.836+02:00  INFO 5296 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Starting TaskmanagerApplication using Java 25.0.2 with PID 5296 (D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager\target\classes started by Acer in D:\Udemy9\Spring-Boot-Backend-Development-Build-Production-Ready-REST\workspaceIntelliJ-2026.1\taskmanager)
-2026-05-27T08:47:03.839+02:00  INFO 5296 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : No active profile set, falling back to 1 default profile: "default"
-2026-05-27T08:47:04.434+02:00  INFO 5296 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-05-27T08:47:04.470+02:00  INFO 5296 --- [taskmanager] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 4 JPA repository interfaces.
-2026-05-27T08:47:04.874+02:00  INFO 5296 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-2026-05-27T08:47:04.885+02:00  INFO 5296 --- [taskmanager] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-27T08:47:04.885+02:00  INFO 5296 --- [taskmanager] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
-2026-05-27T08:47:04.926+02:00  INFO 5296 --- [taskmanager] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1052 ms
-2026-05-27T08:47:05.116+02:00  INFO 5296 --- [taskmanager] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-05-27T08:47:05.164+02:00  INFO 5296 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
-2026-05-27T08:47:05.475+02:00  INFO 5296 --- [taskmanager] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-05-27T08:47:05.501+02:00  INFO 5296 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-27T08:47:06.260+02:00  INFO 5296 --- [taskmanager] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@76208b80
-2026-05-27T08:47:06.261+02:00  INFO 5296 --- [taskmanager] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-27T08:47:06.333+02:00  WARN 5296 --- [taskmanager] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-05-27T08:47:06.517+02:00  INFO 5296 --- [taskmanager] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://aws-1-eu-central-1.pooler.supabase.com:5432/postgres?prepareThreshold=0]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 17.6
-	Default catalog/schema: postgres/public
-	Autocommit mode: undefined/unknown
-	Isolation level: READ_COMMITTED [default READ_COMMITTED]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-05-27T08:47:07.229+02:00  INFO 5296 --- [taskmanager] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-05-27T08:47:07.440+02:00  INFO 5296 --- [taskmanager] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T08:47:07.490+02:00  INFO 5296 --- [taskmanager] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-05-27T08:47:08.033+02:00  WARN 5296 --- [taskmanager] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-05-27T08:47:08.051+02:00  WARN 5296 --- [taskmanager] [main] .s.a.UserDetailsServiceAutoConfiguration : 
-
-Using generated security password: fc9e9ce2-1954-4da5-a0ad-d9e7ffd0527e
-
-This generated password is for development use only. Your security configuration must be updated before running your application in production.
-
-2026-05-27T08:47:08.057+02:00  INFO 5296 --- [taskmanager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2026-05-27T08:47:08.444+02:00  INFO 5296 --- [taskmanager] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-05-27T08:47:08.508+02:00  INFO 5296 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-2026-05-27T08:47:08.514+02:00  INFO 5296 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Started TaskmanagerApplication in 5.025 seconds (process running for 5.499)
-2026-05-27T08:47:08.520+02:00  INFO 5296 --- [taskmanager] [scheduling-1] c.e.t.service.TaskStatusService          : Cache cleared
-2026-05-27T08:47:08.666+02:00  INFO 5296 --- [taskmanager] [RMI TCP Connection(2)-192.168.0.9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-27T08:47:08.667+02:00  INFO 5296 --- [taskmanager] [RMI TCP Connection(2)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-27T08:47:08.668+02:00  INFO 5296 --- [taskmanager] [RMI TCP Connection(2)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2026-05-27T08:47:14.836+02:00  WARN 5296 --- [taskmanager] [http-nio-8080-exec-8] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
-2026-05-27T09:21:44.609+02:00  WARN 5296 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@659a8c25 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T09:21:44.612+02:00  WARN 5296 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m38s186ms170µs200ns).
-2026-05-27T09:21:54.615+02:00  WARN 5296 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@61442596 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T09:22:04.618+02:00  WARN 5296 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@db240db (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T09:22:14.620+02:00  WARN 5296 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7e259641 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T09:22:24.778+02:00  WARN 5296 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1d4cab6f (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
-2026-05-27T10:26:26.304+02:00  INFO 5296 --- [taskmanager] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-05-27T10:26:26.331+02:00  INFO 5296 --- [taskmanager] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-05-27T10:26:26.352+02:00  INFO 5296 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-05-27T10:26:26.364+02:00  INFO 5296 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2026-05-27T10:26:26.558+02:00  INFO 5296 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-30T13:19:43.096+02:00  INFO 25896 --- [taskmanager] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-30T13:19:43.494+02:00  INFO 25896 --- [taskmanager] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-05-30T13:19:43.559+02:00  INFO 25896 --- [taskmanager] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-30T13:19:43.566+02:00  INFO 25896 --- [taskmanager] [main] c.e.taskmanager.TaskmanagerApplication   : Started TaskmanagerApplication in 4.69 seconds (process running for 5.145)
+2026-05-30T13:19:43.572+02:00  INFO 25896 --- [taskmanager] [scheduling-1] c.e.t.service.TaskStatusService          : Cache cleared
+2026-05-30T13:19:44.090+02:00  INFO 25896 --- [taskmanager] [RMI TCP Connection(4)-192.168.0.9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30T13:19:44.090+02:00  INFO 25896 --- [taskmanager] [RMI TCP Connection(4)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-30T13:19:44.091+02:00  INFO 25896 --- [taskmanager] [RMI TCP Connection(4)-192.168.0.9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-05-30T13:42:00.550+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@62629391 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T13:42:00.552+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m18s970ms687µs300ns).
+2026-05-30T13:42:00.587+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@36df977b (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T13:42:00.619+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@715204f (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T13:42:00.660+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@6094ca3e (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T13:42:00.661+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1b6f64f5 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T13:42:00.662+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@411933 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T13:42:00.696+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@51c15cac (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T13:42:00.728+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7ff81983 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T13:42:00.763+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@397be978 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T13:42:00.799+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@59d36a6e (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T14:41:32.214+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@78306b47 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T14:41:32.580+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7f70f786 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T14:41:32.580+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=34m1s966ms405µs800ns).
+2026-05-30T14:41:32.617+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2e47fcec (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T14:41:32.778+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@29ece67b (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T14:41:32.817+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@527dda52 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T14:41:32.858+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2a49cb5c (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T14:41:33.025+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3bf8f265 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T14:41:33.141+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7569145f (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T14:41:33.179+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@49faffea (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:10:49.264+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m46s661ms894µs500ns).
+2026-05-30T15:10:49.315+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2d8dcea2 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:10:49.359+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@6cec473c (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:10:49.406+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7277f0e4 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:10:49.446+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@31ccd8d6 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:10:49.482+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@33010b59 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:10:49.523+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3d5a7fa2 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:10:49.567+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7067483d (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:10:49.611+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@273a248f (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:10:49.654+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1c5ab8f2 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:10:49.691+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@729373b4 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:59:00.324+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@38fffb7b (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:59:00.392+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@74312af (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:59:00.556+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@6ea4cf20 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:59:00.596+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2947d5ac (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:59:00.596+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m11s226ms63µs500ns).
+2026-05-30T15:59:00.684+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5ad63435 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:59:00.837+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@451f83aa (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:59:00.930+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@d0a99e6 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:59:00.984+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1af7d75e (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:59:00.985+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@716b2fa9 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T15:59:01.023+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@48d0f0fd (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T16:39:38.505+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=40m7s908ms9µs).
+2026-05-30T16:39:38.543+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@11cc85a8 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T16:39:38.584+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1d9b9a92 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T16:39:38.632+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@5283d6c4 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T16:39:38.674+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2717f8f9 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T16:39:38.714+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3dc79b5e (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T16:39:38.758+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7c49d97e (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T16:39:38.794+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@303005c5 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T16:39:38.833+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2878f30a (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T16:39:38.883+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@29648030 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T16:39:38.923+02:00  WARN 25896 --- [taskmanager] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1b542e4b (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-05-30T16:46:18.582+02:00  INFO 25896 --- [taskmanager] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-30T16:46:18.597+02:00  INFO 25896 --- [taskmanager] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-30T16:46:18.614+02:00  INFO 25896 --- [taskmanager] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30T16:46:18.625+02:00  INFO 25896 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-30T16:46:18.893+02:00  INFO 25896 --- [taskmanager] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

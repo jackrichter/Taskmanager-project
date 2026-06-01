@@ -18,9 +18,14 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody AuthRequestDto request) {
+        return ResponseEntity.ok(authService.login(request.getEmail(), request.getPassword()));
+    }
 
-        authService.login(request.getEmail(), request.getPassword());
+    @PostMapping("/signup")
+    public ResponseEntity<String> signup(@RequestBody AuthRequestDto request) {
 
-        return ResponseEntity.ok("Login successful");
+        authService.signup(request);
+
+        return ResponseEntity.ok("User registered successfully");
     }
 }
