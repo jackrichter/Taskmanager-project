@@ -27,4 +27,14 @@ public class JwtUtil {
     private Key getSigningKey() {
         return Keys.hmacShaKeyFor(secretKey.getBytes());
     }
+
+    // Validate the token. It will basically reverse the token data
+    public String extractEmail(String token) {
+        return Jwts.parser()
+                .setSigningKey(getSigningKey())
+                .build()
+                .parseSignedClaims(token)  // validates the signature and validates the expiration date of the token
+                .getPayload()              // the data entered inside the token
+                .getSubject();             // because we placed the email inside the subject. If we wanted ex.'role' that is present inside the claim() -> get("role")
+    }
 }
