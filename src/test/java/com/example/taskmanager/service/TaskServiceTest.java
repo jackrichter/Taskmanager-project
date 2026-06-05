@@ -2,11 +2,14 @@ package com.example.taskmanager.service;
 
 import com.example.taskmanager.dto.TaskDto;
 import com.example.taskmanager.dto.TaskWithUserDto;
+import com.example.taskmanager.enums.RoleEnum;
 import com.example.taskmanager.enums.TaskStatusEnum;
 import com.example.taskmanager.exception.TaskNotFoundException;
 import com.example.taskmanager.model.Task;
 import com.example.taskmanager.model.TaskStatus;
+import com.example.taskmanager.model.User;
 import com.example.taskmanager.repository.TaskRepository;
+import com.example.taskmanager.security.AuthenticatedUser;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -15,6 +18,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.*;
 
+import java.nio.file.AccessDeniedException;
 import java.util.List;
 import java.util.Optional;
 
@@ -36,6 +40,12 @@ public class TaskServiceTest {
 
     @InjectMocks
     private TaskService taskService;
+
+    public User createUser(String email) {
+        User user = new User();
+        user.setEmail(email);
+        return user;
+    }
 
     @Test
     void createTask_shouldSaveAndReturnTaskDto() {
@@ -122,12 +132,15 @@ public class TaskServiceTest {
     }
 
     @Test
-    void getTaskById_shouldReturnTaskWithUserDto() {
+    void getTaskById_shouldReturnTaskWithUserDto() throws AccessDeniedException {
         // Given
         Integer id = 1;
 
+        AuthenticatedUser user = new AuthenticatedUser("user@example.com", RoleEnum.USER);
+
         Task task = new Task();
         task.setId(id);
+        task.setUser(createUser("user@example.com"));
         task.setStatus(TaskStatus
                 .builder()
                 .code(TaskStatusEnum.NEW)
@@ -142,7 +155,7 @@ public class TaskServiceTest {
         when(modelMapper.map(task, TaskWithUserDto.class)).thenReturn(dto);
 
         // Invoke the method under test
-        TaskWithUserDto result = taskService.getTaskById(id);
+        TaskWithUserDto result = taskService.getTaskById(user, id);
 
         // Then
         assertThat(result).isNotNull();
@@ -155,11 +168,13 @@ public class TaskServiceTest {
         // Given
         Integer id = 99;
 
+        AuthenticatedUser user = new AuthenticatedUser("user@example.com", RoleEnum.USER);
+
         // When
         when(taskRepository.findById(id)).thenReturn(Optional.empty());
 
         // Then
-        assertThatThrownBy(() -> taskService.getTaskById(id))
+        assertThatThrownBy(() -> taskService.getTaskById(user, id))
                 .isInstanceOf(TaskNotFoundException.class)
                 .hasMessage("Task not found with id: " + id);
 

@@ -3,6 +3,7 @@ package com.example.taskmanager.controller;
 import com.example.taskmanager.dto.TaskDto;
 import com.example.taskmanager.dto.TaskWithUserDto;
 import com.example.taskmanager.exception.InvalidFieldFormatException;
+import com.example.taskmanager.security.AuthenticatedUser;
 import com.example.taskmanager.service.TaskService;
 import jakarta.validation.Valid;
 import jakarta.validation.Validator;
@@ -13,10 +14,12 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import tools.jackson.databind.ObjectMapper;
 
+import java.nio.file.AccessDeniedException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -97,8 +100,9 @@ public class TaskController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<TaskWithUserDto> getTaskById(@PathVariable Integer id) {
-        return ResponseEntity.ok(taskService.getTaskById(id));
+    public ResponseEntity<TaskWithUserDto> getTaskById(@AuthenticationPrincipal AuthenticatedUser authenticatedUser,
+                                                       @PathVariable Integer id) throws AccessDeniedException {
+        return ResponseEntity.ok(taskService.getTaskById(authenticatedUser, id));
     }
 
     @PutMapping("/{id}")

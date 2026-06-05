@@ -1,5 +1,6 @@
 package com.example.taskmanager.model;
 
+import com.example.taskmanager.enums.RoleEnum;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,6 +29,10 @@ public class User {
 
     @Column(name = "password", nullable = false)
     private String password;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "role", nullable = false)
+    private RoleEnum role;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Task> tasks;

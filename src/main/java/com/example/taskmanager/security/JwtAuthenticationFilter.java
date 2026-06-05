@@ -1,11 +1,13 @@
 package com.example.taskmanager.security;
 
+import com.example.taskmanager.enums.RoleEnum;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -41,14 +43,18 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         // We must verify the signature, expiration date, ensure token integrity and finally extract the email (our mesure of autentication)
         try {
             String email = jwtUtil.extractEmail(token); // If passed, the email is valid, that is the request is valid, and the user is authenticated
+            RoleEnum role = jwtUtil.extractRole(token); // Authorization role
+
+            AuthenticatedUser principal = new AuthenticatedUser(email, role);
 
             /** Mandatory **/
 
             // Create a UserAuthentication object based on the valid email
             UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
-                    email,
+//                    email,
+                    principal,
                     null,
-                    List.of());     // Here will be the role that the user has. This list has the Authorization role
+                    List.of(new SimpleGrantedAuthority("ROLE_" + role)));  // Here will be the role that the user has. This list has the Authorization role. ATTN. ROLE_USER, ROLE_ADMIN !!!
 
             // Attach the UserAuthentication object to the Security Context
             SecurityContextHolder.getContext().setAuthentication(authentication);

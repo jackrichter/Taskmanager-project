@@ -1,6 +1,7 @@
 package com.example.taskmanager.service;
 
 import com.example.taskmanager.dto.AuthRequestDto;
+import com.example.taskmanager.enums.RoleEnum;
 import com.example.taskmanager.model.User;
 import com.example.taskmanager.repository.UserRepository;
 import com.example.taskmanager.security.JwtUtil;
@@ -34,7 +35,7 @@ public class AuthService {
         }
 
         // If we reach here, -> login successful
-        return jwtUtil.generateToken(email);
+        return jwtUtil.generateToken(user.getEmail(), user.getRole());
     }
 
     public void signup(AuthRequestDto request) {
@@ -52,6 +53,7 @@ public class AuthService {
         user.setName(request.getUsername());
         user.setEmail(request.getEmail());
         user.setPassword(hashedPassword);
+        user.setRole(RoleEnum.USER);
 
         // Save the User
         userRepository.save(user);

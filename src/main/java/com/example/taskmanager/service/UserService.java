@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -28,5 +30,13 @@ public class UserService {
                     log.error("User with id {} not found", id);
                     return new UserNotFoundException("User not found with id: " + id);
                 });
+    }
+
+    public List<UserWithTaskDto> getAllUsers() {
+        log.info("Getting all users");
+        return userRepository.findAll()
+                .stream()
+                .map(user -> modelMapper.map(user, UserWithTaskDto.class))
+                .toList();
     }
 }
