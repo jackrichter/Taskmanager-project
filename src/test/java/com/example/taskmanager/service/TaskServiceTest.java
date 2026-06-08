@@ -132,7 +132,7 @@ public class TaskServiceTest {
     }
 
     @Test
-    void getTaskById_shouldReturnTaskWithUserDto() throws AccessDeniedException {
+    void getTaskById_shouldReturnTaskWithUserDto_whenUserIsOwner() throws AccessDeniedException {
         // Given
         Integer id = 1;
 
@@ -161,6 +161,61 @@ public class TaskServiceTest {
         assertThat(result).isNotNull();
         assertThat(result.getId()).isEqualTo(id);
         verify(taskRepository, times(1)).findById(id);
+    }
+
+    @Test
+    void getTaskById_shouldThrowAccessDeniedException_whenUserIsNotOwner() throws AccessDeniedException {
+        // Given
+        Integer id = 1;
+
+        AuthenticatedUser user = new AuthenticatedUser("user@example.com", RoleEnum.USER);
+
+        Task task = new Task();
+        task.setId(id);
+        task.setUser(createUser("other@example.com"));  // Another user
+        task.setStatus(TaskStatus
+                .builder()
+                .code(TaskStatusEnum.NEW)
+                .build());
+
+        // When
+        when(taskRepository.findById(id)).thenReturn(Optional.of(task));
+
+        // Then
+        assertThatThrownBy(() -> taskService.getTaskById(user, id))
+                .isInstanceOf(AccessDeniedException.class)
+                .hasMessageContaining("You do not own this task");
+    }
+
+    @Test
+    void getTaskById_shouldReturnTaskForAdmin_evenIfNotOwner() throws AccessDeniedException {
+        // Given
+        Integer id = 1;
+
+        AuthenticatedUser admin = new AuthenticatedUser("admin@example.com", RoleEnum.ADMIN);
+
+        Task task = new Task();
+        task.setId(id);
+        task.setUser(createUser("user@example.com"));
+        task.setStatus(TaskStatus
+                .builder()
+                .code(TaskStatusEnum.NEW)
+                .build());
+
+        TaskWithUserDto dto = new TaskWithUserDto();
+        dto.setId(id);
+        dto.setStatus(TaskStatusEnum.NEW);
+
+        // When
+        when(taskRepository.findById(id)).thenReturn(Optional.of(task));
+        when(modelMapper.map(task, TaskWithUserDto.class)).thenReturn(dto);
+
+        // Invoke the method under test
+        TaskWithUserDto result = taskService.getTaskById(admin, id);
+
+        // Then
+        assertThat(result).isNotNull();
+        assertThat(result.getId()).isEqualTo(id);
     }
 
     @Test
